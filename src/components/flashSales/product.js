@@ -33,7 +33,7 @@ const ProductSlider = () => {
 
   useEffect(() => {
     getProducts();
-  }, []);
+  }, [i18n.language]); // Re-fetch when language changes
 
   // Slider settings
   const settings = {
