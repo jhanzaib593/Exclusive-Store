@@ -1,0 +1,272 @@
+.flash-sales {
+    padding-top: 3em;
+}
+
+.product-slider-container {
+    text-align: center;
+    padding: 10px 0;
+}
+
+:where(.css-dev-only-do-not-override-161f05s).ant-spin .ant-spin-dot-holder {
+    color: #bf5859 !important;
+}
+
+.today {
+    border-left: 10px solid;
+    border-color: #DB4344;
+    padding-left: 10px;
+    color: #DB4344;
+}
+
+.timer {
+    padding-top: 1em;
+}
+
+.timer h2 {
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.countdown {
+    display: flex;
+    gap: 1em;
+    padding-top: 8px;
+}
+
+.countdown span {
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.countdown p {
+    font-size: 12px;
+}
+
+.text-2xl {
+    font-size: 21px;
+    line-height: 4rem;
+    opacity: 1;
+    color: #DB4344;
+}
+
+
+
+/* product */
+
+/* .product-slider-container {
+    width: 100%;
+    margin: 0 auto;
+     padding: 20px; 
+} */
+.veiw-all {
+    background-color: #DB4444;
+    color: #fff;
+    border: none;
+    text-align: center;
+    padding: 10px 5em;
+    border-radius: 6px;
+}
+
+.product-card {
+    padding: 10px;
+    height: 100%;
+}
+
+.ant-carousel .slick-slide {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+.ant-card {
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+    height: 100%;
+    border: none;
+}
+
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 10px;
+}
+
+:where(.css-dev-only-do-not-override-161f05s).ant-card-bordered .ant-card-cover {
+
+    background-color: #F5F5F5;
+    overflow: hidden;
+
+}
+
+.product-card img {
+    width: 100%;
+    max-height: 210px;
+    object-fit: contain !important;
+    padding: 14px 5px;
+    border-radius: 5px !important;
+    transition: 0.3s ease;
+
+
+}
+
+.product-card img:hover {
+    transform: scale(1.2);
+    transition: 0.5s ease-in-out;
+}
+
+
+
+.ant-card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+.sale_price {
+    color: #DB4344;
+    font-weight: 500;
+}
+
+.sale_price span {
+    color: #808080;
+    text-decoration: line-through;
+}
+
+.stars {
+    padding: 10px 0;
+    color: #FFAD33;
+}
+
+.card-cover {
+    position: relative;
+}
+
+.discount-tag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+    font-size: 12px;
+}
+
+.product-image {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    background-color: #f5f5f5;
+}
+
+.overlay-buttons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 1;
+}
+
+.icon-button {
+    font-size: 18px;
+    color: #999;
+    background: #fff;
+    border-radius: 50%;
+    padding: 6px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.icon-button:hover {
+    color: #f40606;
+}
+
+.add-to-cart {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    right: 0;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    transition: all 0.5s ease-in-out;
+    border-radius: 0 0 6px 6px;
+
+
+}
+
+:where(.css-dev-only-do-not-override-161f05s).ant-btn-variant-solid:not(:disabled):not(.ant-btn-disabled):hover {
+    background: #DB4344;
+    color: #fff;
+}
+
+.card-cover:hover .add-to-cart {
+    bottom: 0;
+    /* Slide it up to the visible area */
+}
+
+.price {
+    margin-top: 10px;
+}
+
+.current-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #f40606;
+    margin-right: 10px;
+}
+
+.original-price {
+    font-size: 14px;
+    color: #999;
+    text-decoration: line-through;
+}
+
+.rating {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.star-icon {
+    font-size: 16px;
+    color: #ffc107;
+}
+
+.star-icon.inactive {
+    color: #ccc;
+}
+
+.reviews {
+    font-size: 14px;
+    color: #666;
+    margin-left: 8px;
+}
+
+:where(.css-dev-only-do-not-override-161f05s).ant-card .ant-card-body {
+    padding: 5px 0px !important;
+    border-radius: 0 !important;
+}
+
+:where(.css-dev-only-do-not-override-161f05s).ant-card-hoverable:hover {
+    border-color: transparent;
+    box-shadow: none
+}
+
+@media (max-width: 768px) {
+    .product-card {
+        height: auto;
+    }
+
+    .product-card img {
+        max-height: 200px;
+    }
+}

@@ -1,0 +1,55 @@
+/* Sidebar.css */
+
+/* Mobile Menu Button */
+.mobile-menu-button {
+    position: fixed;
+    bottom: 16px;
+    left: 16px;
+    z-index: 1000;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #DB4444;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.mobile-menu-button:hover {
+    background-color: transparent;
+    border: 1px solid #DB4444 !important;
+    color: #DB4444 !important;
+}
+
+/* Sidebar Menu */
+.sidebar-menu {
+    border-color: #b3b3b3 !important;
+}
+
+/* Menu Item Styling */
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Desktop Sidebar */
+.desktop-sidebar {
+    width: 80%;
+    display: none;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .desktop-sidebar {
+        display: block;
+    }
+
+    .mobile-menu-button {
+        display: none;
+    }
+}

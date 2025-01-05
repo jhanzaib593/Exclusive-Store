@@ -1,0 +1,17 @@
+.categories {
+    padding: 5em 0;
+    border-width: 2px 0px;
+    border-style: solid;
+    border-color: #ECECEC;
+}
+
+.categorie-main {
+    padding: 10px;
+    /* margin: 0 10px; */
+    /* border: 1px solid #F5F5F5; */
+
+}
+
+.categorie-card {
+    border: 1px solid #F5F5F5;
+}

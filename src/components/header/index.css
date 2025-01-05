@@ -1,0 +1,148 @@
+.logo {
+  display: flex;
+  align-items: center;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  color: black;
+}
+
+.nav {
+  display: flex;
+  gap: 30px;
+  margin: auto;
+  font-size: 16px;
+}
+
+.nav_link {
+  color: black !important;
+}
+
+.nav_link:hover {
+  text-decoration: underline;
+  color: #DB4444 !important;
+}
+
+.h_btn {
+  padding: 4px 0;
+  display: flex;
+  gap: 20px;
+}
+
+.h_btn1 {
+  border-radius: 8px;
+  background: var(--Gray--4, #ebebeb) !important;
+  box-shadow: 0px 0px 0px 0px rgba(23, 23, 23, 0.04),
+    0px 2px 4px 0px rgba(23, 23, 23, 0.04),
+    0px 7px 7px 0px rgba(23, 23, 23, 0.03),
+    0px 15px 9px 0px rgba(23, 23, 23, 0.02),
+    0px 27px 11px 0px rgba(23, 23, 23, 0.01),
+    0px 42px 12px 0px rgba(23, 23, 23, 0);
+  width: 112px;
+  height: 44px;
+}
+
+.h_btn1:hover {
+  border: #152c5b !important;
+  color: #152c5b !important;
+}
+
+.h_btn2 {
+  border-radius: 8px;
+  margin: auto;
+  /* background: var(--Primary, #152c5b) !important; */
+  /* box-shadow: 0px 0px 0px 0px rgba(23, 23, 23, 0.04), 0px 2px 4px 0px rgba(23, 23, 23, 0.04), 0px 7px 7px 0px rgba(23, 23, 23, 0.03), 0px 15px 9px 0px rgba(23, 23, 23, 0.02), 0px 27px 11px 0px rgba(23, 23, 23, 0.01), 0px 42px 12px 0px rgba(23, 23, 23, 0); */
+  color: #101010;
+  width: 67px;
+  height: 37px
+}
+
+.h_btn2:hover {
+  border: #152c5b !important;
+  background: var(--Primary, #233964) !important;
+  color: rgb(255, 255, 255) !important;
+}
+
+.icon_cart:hover {
+  color: #DB4444;
+}
+
+:where(.css-dev-only-do-not-override-161f05s).ant-col-12 {
+  margin: auto;
+}
+
+.header_icon {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+
+}
+
+.sreach_bar {
+  display: flex;
+  justify-content: center;
+}
+
+@media only screen and (min-width: 100px) and (max-width: 991px) {
+  .nav {
+    display: none;
+  }
+
+  .h_btn {
+    display: none;
+  }
+
+  .search {
+    display: none;
+  }
+
+  .header_icon {
+    margin: 0;
+    justify-content: end;
+  }
+
+  .sreach_bar {
+    justify-content: end;
+  }
+}
+
+@media only screen and (min-width: 991px) {
+  .h_drawer {
+    display: none !important;
+  }
+
+  .search_icon {
+    display: none;
+  }
+}
+
+.h_drawer {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 32px;
+  color: #4f4f4f;
+}
+
+.nav_d {
+  display: grid;
+  line-height: 3;
+  font-size: 16px;
+}
+
+.nav_link_d {
+  transition: 0.5s;
+  font-weight: 500;
+}
+
+.nav_link_d:hover {
+  background-color: #b55d51f7;
+  color: white !important;
+  padding: 0px 8px;
+  transition: 0.5s;
+}
+
+:where(.css-dev-only-do-not-override-161f05s).ant-btn-color-default {
+  box-shadow: 0 0px 0 rgba(0, 0, 0, 0.02) !important;
+  border: none !important;
+}
