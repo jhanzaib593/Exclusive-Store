@@ -8,12 +8,15 @@ import {
   ShoppingCartOutlined,
 } from "@ant-design/icons";
 import { NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Header = () => {
+  const { t } = useTranslation();
+
   const [top, setTop] = React.useState(0);
   const [open, setOpen] = useState(false);
-
   console.log(setTop);
+
   const showDrawer = () => {
     setOpen(true);
   };
@@ -34,17 +37,17 @@ const Header = () => {
           <div className="container">
             <Row style={{ padding: "12px 0" }}>
               <Col span={4} className="logo">
-                <h2>Exclusive</h2>
+                <h2>{t("welcome")}</h2>
               </Col>
               <Col span={17} className="sreach_bar">
                 <div className="nav">
-                  <NavLink className="nav_link">Home</NavLink>
-                  <NavLink className="nav_link">Contact</NavLink>
-                  <NavLink className="nav_link">About</NavLink>
-                  <NavLink className="nav_link">Sign Up</NavLink>
+                  <NavLink className="nav_link">{t("Home")}</NavLink>
+                  <NavLink className="nav_link">{t("Contact")}</NavLink>
+                  <NavLink className="nav_link">{t("About")}</NavLink>
+                  <NavLink className="nav_link">{t("SignUp")}</NavLink>
                 </div>
                 <Input
-                  placeholder="What are you looking for?"
+                  placeholder={`${t("placeholder")}`}
                   className="search"
                   style={{
                     width: "40%",
@@ -107,10 +110,18 @@ const Header = () => {
                 <MenuFoldOutlined onClick={showDrawer} />
                 <Drawer onClose={onClose} open={open}>
                   <div className="nav_d">
-                    <NavLink className="nav_link nav_link_d">Home</NavLink>
-                    <NavLink className="nav_link nav_link_d">Contact</NavLink>
-                    <NavLink className="nav_link nav_link_d">About</NavLink>
-                    <NavLink className="nav_link nav_link_d">Sign Up</NavLink>
+                    <NavLink className="nav_link nav_link_d">
+                      {t("Home")}
+                    </NavLink>
+                    <NavLink className="nav_link nav_link_d">
+                      {t("Contact")}
+                    </NavLink>
+                    <NavLink className="nav_link nav_link_d">
+                      {t("About")}
+                    </NavLink>
+                    <NavLink className="nav_link nav_link_d">
+                      {t("SignUp")}
+                    </NavLink>
                   </div>
                 </Drawer>
               </Col>

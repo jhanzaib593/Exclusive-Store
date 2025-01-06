@@ -1,377 +1,618 @@
 {
   "allProductsStore": [
-    {
-      "id": "bs1",
-      "name": "The north coat",
-      "price": 364,
-      "discount_price": 245,
-      "img": "/best-selling-img/coat.svg",
-      "alt": "game pad",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo laborum ducimus error? Quo non quam recusandae. Molestiae alias vel culpa ad dicta unde fugit commodi! Perferendis maxime repudiandae nemo.",
-      "stars": 4.7,
-      "reviews": 100,
-      "times rated": 88
-    },
-    {
-      "id": "bs2",
-      "name": "Gucci duffle bag",
-      "price": 1160,
-      "discount_price": 960,
-      "img": "/best-selling-img/duffle-bag.svg",
-      "alt": "keyboard",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo laborum ducimus error? Quo non quam recusandae. Molestiae alias vel culpa ad dicta unde fugit commodi! Perferendis maxime repudiandae nemo.",
-      "stars": 5,
-      "reviews": 150,
-      "times rated": 75
-    },
-    {
-      "id": "bs3",
-      "name": "IPS LCD Gaming Monitor",
-      "price": 400,
-      "discount_price": 370,
-      "img": "/flash-sales-img/monitor.png",
-      "alt": "monitor",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo laborum ducimus error? Quo non quam recusandae. Molestiae alias vel culpa ad dicta unde fugit commodi! Perferendis maxime repudiandae nemo.",
-      "stars": 4.3,
-      "reviews": 130,
-      "times rated": 99
-    },
-   
-    {
-      "id": "bs5",
-      "name": "Small BookSelf",
-      "price": 660,
-      "discount_price": 470,
-      "img": "/best-selling-img/bookshelf.svg",
-      "alt": "jacket",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo laborum ducimus error? Quo non quam recusandae. Molestiae alias vel culpa ad dicta unde fugit commodi! Perferendis maxime repudiandae nemo.",
-      "stars": 5,
-      "reviews": 100,
-      "times rated": 55
-    },
-    {
-      "id": "bs6",
-      "name": "ASUS FHD Gaming Laptop",
-      "price": 700,
-      "discount_price": 570,
-      "img": "/flash-sales-img/laptop.png",
-      "alt": "laptop",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo laborum ducimus error? Quo non quam recusandae. Molestiae alias vel culpa ad dicta unde fugit commodi! Perferendis maxime repudiandae nemo.",
-      "stars": 5,
-      "reviews": 90,
-      "times rated": 325
-    },
-
-    {
-      "id": "explr1",
-      "name": "Breed Dry Dog Food",
-      "price": 100,
-      "new": "new",
-      "img": "/explore-products-img/dog-food.svg",
-      "alt": "dog food",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo laborum ducimus error? Quo non quam recusandae. Molestiae alias vel culpa ad dicta unde fugit commodi! Perferendis maxime repudiandae nemo.",
-      "stars": 5,
-      "reviews": 75,
-      "times rated": 34
-    },
-    {
-      "id": "explr2",
-      "name": "GP11 Shooter USB Gamepad",
-      "price": 660,
-      "new": "new",
-      "img": "/explore-products-img/game-pad-b.svg",
-      "alt": "game pad",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo laborum ducimus error? Quo non quam recusandae. Molestiae alias vel culpa ad dicta unde fugit commodi! Perferendis maxime repudiandae nemo.",
-      "stars": 5,
-      "reviews": 135,
-      "times rated": 88
-    },
-    {
-      "id": "explr3",
-      "name": "CANON EOS DSLR Camera",
-      "price": 1160,
-      "img": "/explore-products-img/camera.svg",
-      "alt": "keyboard",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo laborum ducimus error? Quo non quam recusandae. Molestiae alias vel culpa ad dicta unde fugit commodi! Perferendis maxime repudiandae nemo.",
-      "stars": 4.5,
-      "reviews": 150,
-      "times rated": 75
-    },
-    {
-      "id": "explr4",
-      "name": "Curology Product Set ",
-      "price": 554,
-      "new": "new",
-      "img": "/explore-products-img/product-set.svg",
-      "alt": "keyboard",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo laborum ducimus error? Quo non quam recusandae. Molestiae alias vel culpa ad dicta unde fugit commodi! Perferendis maxime repudiandae nemo.",
-      "stars": 5,
-      "reviews": 110,
-      "times rated": 75
-    },
-    {
-      "id": "explr5",
-      "name": "IPS LCD Gaming Monitor",
-      "price": 400,
-      "img": "/flash-sales-img/monitor.png",
-      "alt": "monitor",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo laborum ducimus error? Quo non quam recusandae. Molestiae alias vel culpa ad dicta unde fugit commodi! Perferendis maxime repudiandae nemo.",
-      "stars": 5,
-      "reviews": 130,
-      "times rated": 99
-    },
-    {
-      "id": "explr6",
-      "name": "S-Series Comfort Chair",
-      "price": 400,
-      "img": "/flash-sales-img/chair.png",
-      "alt": "chair",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo laborum ducimus error? Quo non quam recusandae. Molestiae alias vel culpa ad dicta unde fugit commodi! Perferendis maxime repudiandae nemo.",
-      "stars": 5,
-      "reviews": 120,
-      "times rated": 99
-    },
-    {
-      "id": "explr7",
-      "name": "Kids Electric Car",
-      "price": 940,
-      "img": "/explore-products-img/car.svg",
-      "alt": "chair",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo laborum ducimus error? Quo non quam recusandae. Molestiae alias vel culpa ad dicta unde fugit commodi! Perferendis maxime repudiandae nemo.",
-      "stars": 5,
-      "reviews": 130,
-      "times rated": 99
-    },
-    {
-      "id": "explr8",
-      "name": "Quilted Satin Jacket",
-      "price": 660,
-      "img": "/flash-sales-img/jacket.png",
-      "alt": "jacket",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo laborum ducimus error? Quo non quam recusandae. Molestiae alias vel culpa ad dicta unde fugit commodi! Perferendis maxime repudiandae nemo.",
-      "stars": 5,
-      "reviews": 110,
-      "times rated": 55
-    },
-    {
-      "id": "explr9",
-      "name": "Jr. Zoom Soccer Cleats",
-      "price": 500,
-      "new": "new",
-      "img": "/explore-products-img/football-boots.svg",
-      "alt": "game pad",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo laborum ducimus error? Quo non quam recusandae. Molestiae alias vel culpa ad dicta unde fugit commodi! Perferendis maxime repudiandae nemo.",
-      "stars": 5,
-      "reviews": 80,
-      "times rated": 88
-    },
-    {
-      "id": "explr10",
-      "name": "HAVIT HV-G92 Gamepad",
-      "price": 160,
-      "new": "new",
-      "img": "/flash-sales-img/game-pad.png",
-      "alt": "game pad",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo laborum ducimus error? Quo non quam recusandae. Molestiae alias vel culpa ad dicta unde fugit commodi! Perferendis maxime repudiandae nemo.",
-      "stars": 3.5,
-      "reviews": 150,
-      "times rated": 88
-    },
-    {
-      "id": "explr11",
-      "name": "AK-900 Wired Keyboard",
-      "price": 1160,
-      "new": "new",
-      "img": "/flash-sales-img/keyboard.png",
-      "alt": "keyboard",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo laborum ducimus error? Quo non quam recusandae. Molestiae alias vel culpa ad dicta unde fugit commodi! Perferendis maxime repudiandae nemo.",
-      "stars": 5,
-      "reviews": 150,
-      "times rated": 75
-    },
-    {
-      "id": "explr12",
-      "name": "ASUS FHD Gaming Laptop",
-      "price": 700,
-      "img": "/flash-sales-img/laptop.png",
-      "alt": "laptop",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo laborum ducimus error? Quo non quam recusandae. Molestiae alias vel culpa ad dicta unde fugit commodi! Perferendis maxime repudiandae nemo.",
-      "stars": 5,
-      "reviews": 130,
-      "times rated": 325
-    },
-
-    {
-      "id": "flsp1",
-      "name": "HAVIT HV-G92 Gamepad",
-      "price": 160,
-      "discount_price": 126,
-      "discount-percentage": "40%",
-      "img": "/flash-sales-img/game-pad.png",
-      "alt": "game pad",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo laborum ducimus error? Quo non quam recusandae. Molestiae alias vel culpa ad dicta unde fugit commodi! Perferendis maxime repudiandae nemo.",
-      "stars": 4.2,
-      "reviews": 150,
-      "times rated": 88
-    },
-    {
-      "id": "flsp2",
-      "name": "AK-900 Wired Keyboard",
-      "price": 1160,
-      "discount_price": 960,
-      "discount-percentage": "35%",
-      "img": "/flash-sales-img/keyboard.png",
-      "alt": "keyboard",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo laborum ducimus error? Quo non quam recusandae. Molestiae alias vel culpa ad dicta unde fugit commodi! Perferendis maxime repudiandae nemo.",
-      "stars": 5,
-      "reviews": 110,
-      "times rated": 75
-    },
-    {
-      "id": "flsp3",
-      "name": "IPS LCD Gaming Monitor",
-      "price": 400,
-      "discount_price": 370,
-      "discount-percentage": "50%",
-      "img": "/flash-sales-img/monitor.png",
-      "alt": "monitor",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo laborum ducimus error? Quo non quam recusandae. Molestiae alias vel culpa ad dicta unde fugit commodi! Perferendis maxime repudiandae nemo.",
-      "stars": 5,
-      "reviews": 80,
-      "times rated": 99
-    },
-    {
-      "id": "flsp4",
-      "name": "S-Series Comfort Chair",
-      "price": 400,
-      "discount_price": 375,
-      "discount-percentage": "40%",
-      "img": "/flash-sales-img/chair.png",
-      "alt": "chair",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo laborum ducimus error? Quo non quam recusandae. Molestiae alias vel culpa ad dicta unde fugit commodi! Perferendis maxime repudiandae nemo.",
-      "stars": 3.9,
-      "reviews": 90,
-      "times rated": 99
-    },
-    {
-      "id": "flsp5",
-      "name": "Quilted Satin Jacket",
-      "price": 660,
-      "discount_price": 470,
-      "discount-percentage": "42%",
-      "img": "/flash-sales-img/jacket.png",
-      "alt": "jacket",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo laborum ducimus error? Quo non quam recusandae. Molestiae alias vel culpa ad dicta unde fugit commodi! Perferendis maxime repudiandae nemo.",
-      "stars": 5,
-      "reviews": 90,
-      "times rated": 55
-    },
-    {
-      "id": "flsp6",
-      "name": "ASUS FHD Gaming Laptop",
-      "price": 700,
-      "discount_price": 570,
-      "discount-percentage": "20%",
-      "img": "/flash-sales-img/laptop.png",
-      "alt": "laptop",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo laborum ducimus error? Quo non quam recusandae. Molestiae alias vel culpa ad dicta unde fugit commodi! Perferendis maxime repudiandae nemo.",
-      "stars": 5,
-      "reviews": 110,
-      "times rated": 325
-    },
-
-    {
-      "id": "jstfy1",
-      "name": "ASUS FHD Gaming Laptop",
-      "price": 700,
-      "discount_price": 570,
-      "discount-percentage": "20%",
-      "img": "/flash-sales-img/laptop.png",
-      "alt": "laptop",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo laborum ducimus error? Quo non quam recusandae. Molestiae alias vel culpa ad dicta unde fugit commodi! Perferendis maxime repudiandae nemo.",
-      "stars": 5,
-      "reviews": 130,
-      "times rated": 325
-    },
-    {
-      "id": "jstfy2",
-      "name": "IPS LCD Gaming Monitor",
-      "price": 400,
-      "discount_price": 370,
-      "discount-percentage": "50%",
-      "img": "/flash-sales-img/monitor.png",
-      "alt": "monitor",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo laborum ducimus error? Quo non quam recusandae. Molestiae alias vel culpa ad dicta unde fugit commodi! Perferendis maxime repudiandae nemo.",
-      "stars": 5,
-      "reviews": 130,
-      "times rated": 99
-    },
-    {
-      "id": "jstfy3",
-      "name": "HAVIT HV-G92 Gamepad",
-      "price": 160,
-      "discount_price": 126,
-      "discount-percentage": "40%",
-      "img": "/flash-sales-img/game-pad.png",
-      "alt": "game pad",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo laborum ducimus error? Quo non quam recusandae. Molestiae alias vel culpa ad dicta unde fugit commodi! Perferendis maxime repudiandae nemo.",
-      "stars": 5,
-      "reviews": 150,
-      "times rated": 88
-    },
-    {
-      "id": "jstfy4",
-      "name": "AK-900 Wired Keyboard",
-      "price": 1160,
-      "discount_price": 960,
-      "discount-percentage": "35%",
-      "img": "/flash-sales-img/keyboard.png",
-      "alt": "keyboard",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo laborum ducimus error? Quo non quam recusandae. Molestiae alias vel culpa ad dicta unde fugit commodi! Perferendis maxime repudiandae nemo.",
-      "stars": 5,
-      "reviews": 150,
-      "times rated": 75
-    },
-    {
-      "id": "it1",
-      "name": "HAVIT HV-G92 Gamepad",
-      "price": 160,
-      "discount_price": 126,
-      "img": "/flash-sales-img/game-pad.png",
-      "alt": "game pad",
-      "stars": 5,
-      "times rated": 88
-    },
-
-    {
-      "id": "it2",
-      "name": "AK-900 Wired Keyboard",
-      "price": 1160,
-      "discount_price": 960,
-      "img": "/flash-sales-img/keyboard.png",
-      "alt": "keyboard",
-      "stars": 5,
-      "times rated": 75
-    },
-    {
-      "id": "it3",
-      "name": "IPS LCD Gaming Monitor",
-      "price": 400,
-      "discount_price": 370,
-      "img": "/flash-sales-img/monitor.png",
-      "alt": "monitor",
-      "stars": 4.5,
-      "times rated": 99
-    },
-    {
-      "id": "it4",
-      "name": "RGB liquid CPU Cooler",
-      "price": 400,
-      "discount_price": 375,
-      "img": "/best-selling-img/cpu-cooler.svg",
-      "alt": "chair",
-      "stars": 5,
-      "times rated": 99
-    }
+      {
+        "id": "bs1",
+        "translations": {
+          "en": {
+            "name": "The north coat",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo laborum ducimus error? Quo non quam recusandae. Molestiae alias vel culpa ad dicta unde fugit commodi! Perferendis maxime repudiandae nemo.",
+            "alt": "game pad"
+          },
+          "ar": {
+            "name": "المعطف الشمالي",
+            "description": "لوريم إيبسوم دولار سيت أميت كونسيكتيتور أديباسكينغ إليت. كواس إكسبليتابو لابورم دوكيموس إيرور؟ كو نون كوام ريكوسانداي. موليستياي ألياس فيل كولبا أد ديكتا أندي فوجيت كومودي! بيرفيرينديس ماكسيما ريبوديانداي نيمو.",
+            "alt": "لوحة اللعبة"
+          }
+        },
+        "price": 364,
+        "discount_price": 245,
+        "img": "/best-selling-img/coat.svg",
+        "stars": 4.7,
+        "reviews": 100,
+        "times rated": 88
+      },
+      {
+        "id": "bs2",
+        "translations": {
+          "en": {
+            "name": "Gucci duffle bag",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo laborum ducimus error? Quo non quam recusandae. Molestiae alias vel culpa ad dicta unde fugit commodi! Perferendis maxime repudiandae nemo.",
+            "alt": "keyboard"
+          },
+          "ar": {
+            "name": "حقيبة غوتشي",
+            "description": "لوريم إيبسوم دولار سيت أميت كونسيكتيتور أديباسكينغ إليت. كواس إكسبليتابو لابورم دوكيموس إيرور؟ كو نون كوام ريكوسانداي. موليستياي ألياس فيل كولبا أد ديكتا أندي فوجيت كومودي! بيرفيرينديس ماكسيما ريبوديانداي نيمو.",
+            "alt": "لوحة المفاتيح"
+          }
+        },
+        "price": 1160,
+        "discount_price": 960,
+        "img": "/best-selling-img/duffle-bag.svg",
+        "stars": 5,
+        "reviews": 150,
+        "times rated": 75
+      },
+      {
+        "id": "bs3",
+        "translations": {
+          "en": {
+            "name": "IPS LCD Gaming Monitor",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo laborum ducimus error? Quo non quam recusandae. Molestiae alias vel culpa ad dicta unde fugit commodi! Perferendis maxime repudiandae nemo.",
+            "alt": "monitor"
+          },
+          "ar": {
+            "name": "شاشة ألعاب IPS LCD",
+            "description": "لوريم إيبسوم دولار سيت أميت كونسيكتيتور أديباسكينغ إليت. كواس إكسبليتابو لابورم دوكيموس إيرور؟ كو نون كوام ريكوسانداي. موليستياي ألياس فيل كولبا أد ديكتا أندي فوجيت كومودي! بيرفيرينديس ماكسيما ريبوديانداي نيمو.",
+            "alt": "شاشة"
+          }
+        },
+        "price": 400,
+        "discount_price": 370,
+        "img": "/flash-sales-img/monitor.png",
+        "stars": 4.3,
+        "reviews": 130,
+        "times rated": 99
+      },
+      {
+        "id": "bs5",
+        "translations": {
+          "en": {
+            "name": "Small BookSelf",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo laborum ducimus error? Quo non quam recusandae. Molestiae alias vel culpa ad dicta unde fugit commodi! Perferendis maxime repudiandae nemo.",
+            "alt": "jacket"
+          },
+          "ar": {
+            "name": "رف كتب صغير",
+            "description": "لوريم إيبسوم دولار سيت أميت كونسيكتيتور أديباسكينغ إليت. كواس إكسبليتابو لابورم دوكيموس إيرور؟ كو نون كوام ريكوسانداي. موليستياي ألياس فيل كولبا أد ديكتا أندي فوجيت كومودي! بيرفيرينديس ماكسيما ريبوديانداي نيمو.",
+            "alt": "سترة"
+          }
+        },
+        "price": 660,
+        "discount_price": 470,
+        "img": "/best-selling-img/bookshelf.svg",
+        "stars": 5,
+        "reviews": 100,
+        "times rated": 55
+      },
+      {
+        "id": "bs6",
+        "translations": {
+          "en": {
+            "name": "ASUS FHD Gaming Laptop",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo laborum ducimus error? Quo non quam recusandae. Molestiae alias vel culpa ad dicta unde fugit commodi! Perferendis maxime repudiandae nemo.",
+            "alt": "laptop"
+          },
+          "ar": {
+            "name": "لاب توب ألعاب ASUS FHD",
+            "description": "لوريم إيبسوم دولار سيت أميت كونسيكتيتور أديباسكينغ إليت. كواس إكسبليتابو لابورم دوكيموس إيرور؟ كو نون كوام ريكوسانداي. موليستياي ألياس فيل كولبا أد ديكتا أندي فوجيت كومودي! بيرفيرينديس ماكسيما ريبوديانداي نيمو.",
+            "alt": "لابتوب"
+          }
+        },
+        "price": 700,
+        "discount_price": 570,
+        "img": "/flash-sales-img/laptop.png",
+        "stars": 5,
+        "reviews": 90,
+        "times rated": 325
+      },
+      {
+        "id": "explr1",
+        "translations": {
+          "en": {
+            "name": "Breed Dry Dog Food",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo laborum ducimus error? Quo non quam recusandae. Molestiae alias vel culpa ad dicta unde fugit commodi! Perferendis maxime repudiandae nemo.",
+            "alt": "dog food"
+          },
+          "ar": {
+            "name": "طعام الكلاب الجاف",
+            "description": "لوريم إيبسوم دولار سيت أميت كونسيكتيتور أديباسكينغ إليت. كواس إكسبليتابو لابورم دوكيموس إيرور؟ كو نون كوام ريكوسانداي. موليستياي ألياس فيل كولبا أد ديكتا أندي فوجيت كومودي! بيرفيرينديس ماكسيما ريبوديانداي نيمو.",
+            "alt": "طعام الكلب"
+          }
+        },
+        "price": 100,
+        "new": "new",
+        "img": "/explore-products-img/dog-food.svg",
+        "stars": 5,
+        "reviews": 75,
+        "times rated": 34
+      },
+      {
+        "id": "explr2",
+        "translations": {
+          "en": {
+            "name": "GP11 Shooter USB Gamepad",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo laborum ducimus error? Quo non quam recusandae. Molestiae alias vel culpa ad dicta unde fugit commodi! Perferendis maxime repudiandae nemo.",
+            "alt": "game pad"
+          },
+          "ar": {
+            "name": "جيم باد USB GP11",
+            "description": "لوريم إيبسوم دولار سيت أميت كونسيكتيتور أديباسكينغ إليت. كواس إكسبليتابو لابورم دوكيموس إيرور؟ كو نون كوام ريكوسانداي. موليستياي ألياس فيل كولبا أد ديكتا أندي فوجيت كومودي! بيرفيرينديس ماكسيما ريبوديانداي نيمو.",
+            "alt": "لوحة اللعبة"
+          }
+        },
+        "price": 660,
+        "new": "new",
+        "img": "/explore-products-img/game-pad-b.svg",
+        "stars": 5,
+        "reviews": 135,
+        "times rated": 88
+      },
+      {
+        "id": "explr3",
+        "translations": {
+          "en": {
+            "name": "CANON EOS DSLR Camera",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo laborum ducimus error? Quo non quam recusandae. Molestiae alias vel culpa ad dicta unde fugit commodi! Perferendis maxime repudiandae nemo.",
+            "alt": "keyboard"
+          },
+          "ar": {
+            "name": "كاميرا CANON EOS DSLR",
+            "description": "لوريم إيبسوم دولار سيت أميت كونسيكتيتور أديباسكينغ إليت. كواس إكسبليتابو لابورم دوكيموس إيرور؟ كو نون كوام ريكوسانداي. موليستياي ألياس فيل كولبا أد ديكتا أندي فوجيت كومودي! بيرفيرينديس ماكسيما ريبوديانداي نيمو.",
+            "alt": "لوحة المفاتيح"
+          }
+        },
+        "price": 1160,
+        "img": "/explore-products-img/camera.svg",
+        "stars": 4.5,
+        "reviews": 150,
+        "times rated": 75
+      },
+      {
+        "id": "explr4",
+        "translations": {
+          "en": {
+            "name": "Curology Product Set",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo laborum ducimus error? Quo non quam recusandae. Molestiae alias vel culpa ad dicta unde fugit commodi! Perferendis maxime repudiandae nemo.",
+            "alt": "keyboard"
+          },
+          "ar": {
+            "name": "مجموعة منتجات Curology",
+            "description": "لوريم إيبسوم دولار سيت أميت كونسيكتيتور أديباسكينغ إليت. كواس إكسبليتابو لابورم دوكيموس إيرور؟ كو نون كوام ريكوسانداي. موليستياي ألياس فيل كولبا أد ديكتا أندي فوجيت كومودي! بيرفيرينديس ماكسيما ريبوديانداي نيمو.",
+            "alt": "لوحة المفاتيح"
+          }
+        },
+        "price": 554,
+        "new": "new",
+        "img": "/explore-products-img/product-set.svg",
+        "stars": 5,
+        "reviews": 110,
+        "times rated": 75
+      },
+      {
+        "id": "explr5",
+        "translations": {
+          "en": {
+            "name": "IPS LCD Gaming Monitor",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo laborum ducimus error? Quo non quam recusandae. Molestiae alias vel culpa ad dicta unde fugit commodi! Perferendis maxime repudiandae nemo.",
+            "alt": "monitor"
+          },
+          "ar": {
+            "name": "شاشة ألعاب IPS LCD",
+            "description": "لوريم إيبسوم دولار سيت أميت كونسيكتيتور أديباسكينغ إليت. كواس إكسبليتابو لابورم دوكيموس إيرور؟ كو نون كوام ريكوسانداي. موليستياي ألياس فيل كولبا أد ديكتا أندي فوجيت كومودي! بيرفيرينديس ماكسيما ريبوديانداي نيمو.",
+            "alt": "شاشة"
+          }
+        },
+        "price": 400,
+        "img": "/flash-sales-img/monitor.png",
+        "stars": 5,
+        "reviews": 130,
+        "times rated": 99
+      },
+      {
+        "id": "explr6",
+        "translations": {
+          "en": {
+            "name": "S-Series Comfort Chair",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo laborum ducimus error? Quo non quam recusandae. Molestiae alias vel culpa ad dicta unde fugit commodi! Perferendis maxime repudiandae nemo.",
+            "alt": "chair"
+          },
+          "ar": {
+            "name": "كرسي راحة S-Series",
+            "description": "لوريم إيبسوم دولار سيت أميت كونسيكتيتور أديباسكينغ إليت. كواس إكسبليتابو لابورم دوكيموس إيرور؟ كو نون كوام ريكوسانداي. موليستياي ألياس فيل كولبا أد ديكتا أندي فوجيت كومودي! بيرفيرينديس ماكسيما ريبوديانداي نيمو.",
+            "alt": "كرسي"
+          }
+        },
+        "price": 400,
+        "img": "/flash-sales-img/chair.png",
+        "stars": 5,
+        "reviews": 120,
+        "times rated": 99
+      },
+      {
+        "id": "explr7",
+        "translations": {
+          "en": {
+            "name": "Kids Electric Car",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo laborum ducimus error? Quo non quam recusandae. Molestiae alias vel culpa ad dicta unde fugit commodi! Perferendis maxime repudiandae nemo.",
+            "alt": "chair"
+          },
+          "ar": {
+            "name": "سيارة كهربائية للأطفال",
+            "description": "لوريم إيبسوم دولار سيت أميت كونسيكتيتور أديباسكينغ إليت. كواس إكسبليتابو لابورم دوكيموس إيرور؟ كو نون كوام ريكوسانداي. موليستياي ألياس فيل كولبا أد ديكتا أندي فوجيت كومودي! بيرفيرينديس ماكسيما ريبوديانداي نيمو.",
+            "alt": "كرسي"
+          }
+        },
+        "price": 940,
+        "img": "/explore-products-img/car.svg",
+        "stars": 5,
+        "reviews": 130,
+        "times rated": 99
+      },
+      {
+        "id": "explr8",
+        "translations": {
+          "en": {
+            "name": "Quilted Satin Jacket",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo laborum ducimus error? Quo non quam recusandae. Molestiae alias vel culpa ad dicta unde fugit commodi! Perferendis maxime repudiandae nemo.",
+            "alt": "jacket"
+          },
+          "ar": {
+            "name": "سترة ساتان مبطن",
+            "description": "لوريم إيبسوم دولار سيت أميت كونسيكتيتور أديباسكينغ إليت. كواس إكسبليتابو لابورم دوكيموس إيرور؟ كو نون كوام ريكوسانداي. موليستياي ألياس فيل كولبا أد ديكتا أندي فوجيت كومودي! بيرفيرينديس ماكسيما ريبوديانداي نيمو.",
+            "alt": "سترة"
+          }
+        },
+        "price": 660,
+        "img": "/flash-sales-img/jacket.png",
+        "stars": 5,
+        "reviews": 110,
+        "times rated": 55
+      },
+      {
+        "id": "explr9",
+        "translations": {
+          "en": {
+            "name": "Jr. Zoom Soccer Cleats",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo laborum ducimus error? Quo non quam recusandae. Molestiae alias vel culpa ad dicta unde fugit commodi! Perferendis maxime repudiandae nemo.",
+            "alt": "game pad"
+          },
+          "ar": {
+            "name": "أحذية كرة القدم Jr. Zoom",
+            "description": "لوريم إيبسوم دولار سيت أميت كونسيكتيتور أديباسكينغ إليت. كواس إكسبليتابو لابورم دوكيموس إيرور؟ كو نون كوام ريكوسانداي. موليستياي ألياس فيل كولبا أد ديكتا أندي فوجيت كومودي! بيرفيرينديس ماكسيما ريبوديانداي نيمو.",
+            "alt": "لوحة اللعبة"
+          }
+        },
+        "price": 500,
+        "new": "new",
+        "img": "/explore-products-img/football-boots.svg",
+        "stars": 5,
+        "reviews": 80,
+        "times rated": 88
+      },
+    
+    
+    
+    
+    
+    
+    
+      {
+        "id": "explr10",
+        "translations": {
+          "en": {
+            "name": "HAVIT HV-G92 Gamepad",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo laborum ducimus error? Quo non quam recusandae. Molestiae alias vel culpa ad dicta unde fugit commodi! Perferendis maxime repudiandae nemo.",
+            "alt": "game pad"
+          },
+          "ar": {
+            "name": "لعبة HAVIT HV-G92",
+            "description": "لوريم إيبسوم دولور سيت أميت كونسيكتيتور أديبيسيسينغ إيليت. كواس إكسبليتابو لابوروم دوكيموس إيرور؟ كو نون كوام ريكوساندي. موليستياي ألياس فيل كولبا عد ديكتا أوند فيجيت كومودي! بيرفيرينديس ماكسيم ريبودياندي نيمو.",
+            "alt": "لوحة ألعاب"
+          }
+        },
+        "price": 160,
+        "new": "new",
+        "img": "/flash-sales-img/game-pad.png",
+        "stars": 3.5,
+        "reviews": 150,
+        "times rated": 88
+      },
+      {
+        "id": "explr11",
+        "translations": {
+          "en": {
+            "name": "AK-900 Wired Keyboard",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo laborum ducimus error? Quo non quam recusandae. Molestiae alias vel culpa ad dicta unde fugit commodi! Perferendis maxime repudiandae nemo.",
+            "alt": "keyboard"
+          },
+          "ar": {
+            "name": "لوحة مفاتيح AK-900 السلكية",
+            "description": "لوريم إيبسوم دولور سيت أميت كونسيكتيتور أديبيسيسينغ إيليت. كواس إكسبليتابو لابوروم دوكيموس إيرور؟ كو نون كوام ريكوساندي. موليستياي ألياس فيل كولبا عد ديكتا أوند فيجيت كومودي! بيرفيرينديس ماكسيم ريبودياندي نيمو.",
+            "alt": "لوحة مفاتيح"
+          }
+        },
+        "price": 1160,
+        "new": "new",
+        "img": "/flash-sales-img/keyboard.png",
+        "stars": 5,
+        "reviews": 150,
+        "times rated": 75
+      },
+      {
+        "id": "explr12",
+        "translations": {
+          "en": {
+            "name": "ASUS FHD Gaming Laptop",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo laborum ducimus error? Quo non quam recusandae. Molestiae alias vel culpa ad dicta unde fugit commodi! Perferendis maxime repudiandae nemo.",
+            "alt": "laptop"
+          },
+          "ar": {
+            "name": "لابتوب ألعاب ASUS FHD",
+            "description": "لوريم إيبسوم دولور سيت أميت كونسيكتيتور أديبيسيسينغ إيليت. كواس إكسبليتابو لابوروم دوكيموس إيرور؟ كو نون كوام ريكوساندي. موليستياي ألياس فيل كولبا عد ديكتا أوند فيجيت كومودي! بيرفيرينديس ماكسيم ريبودياندي نيمو.",
+            "alt": "لابتوب"
+          }
+        },
+        "price": 700,
+        "img": "/flash-sales-img/laptop.png",
+        "stars": 5,
+        "reviews": 130,
+        "times rated": 325
+      },
+      {
+        "id": "flsp1",
+        "translations": {
+          "en": {
+            "name": "HAVIT HV-G92 Gamepad",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo laborum ducimus error? Quo non quam recusandae. Molestiae alias vel culpa ad dicta unde fugit commodi! Perferendis maxime repudiandae nemo.",
+            "alt": "game pad"
+          },
+          "ar": {
+            "name": "لعبة HAVIT HV-G92",
+            "description": "لوريم إيبسوم دولور سيت أميت كونسيكتيتور أديبيسيسينغ إيليت. كواس إكسبليتابو لابوروم دوكيموس إيرور؟ كو نون كوام ريكوساندي. موليستياي ألياس فيل كولبا عد ديكتا أوند فيجيت كومودي! بيرفيرينديس ماكسيم ريبودياندي نيمو.",
+            "alt": "لوحة ألعاب"
+          }
+        },
+        "price": 160,
+        "discount_price": 126,
+        "discount-percentage": "40%",
+        "img": "/flash-sales-img/game-pad.png",
+        "stars": 4.2,
+        "reviews": 150,
+        "times rated": 88
+      },
+      {
+        "id": "flsp2",
+        "translations": {
+          "en": {
+            "name": "AK-900 Wired Keyboard",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo laborum ducimus error? Quo non quam recusandae. Molestiae alias vel culpa ad dicta unde fugit commodi! Perferendis maxime repudiandae nemo.",
+            "alt": "keyboard"
+          },
+          "ar": {
+            "name": "لوحة مفاتيح AK-900 السلكية",
+            "description": "لوريم إيبسوم دولور سيت أميت كونسيكتيتور أديبيسيسينغ إيليت. كواس إكسبليتابو لابوروم دوكيموس إيرور؟ كو نون كوام ريكوساندي. موليستياي ألياس فيل كولبا عد ديكتا أوند فيجيت كومودي! بيرفيرينديس ماكسيم ريبودياندي نيمو.",
+            "alt": "لوحة مفاتيح"
+          }
+        },
+        "price": 1160,
+        "discount_price": 960,
+        "discount-percentage": "35%",
+        "img": "/flash-sales-img/keyboard.png",
+        "stars": 5,
+        "reviews": 110,
+        "times rated": 75
+      },
+      {
+        "id": "flsp3",
+        "translations": {
+          "en": {
+            "name": "IPS LCD Gaming Monitor",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo laborum ducimus error? Quo non quam recusandae. Molestiae alias vel culpa ad dicta unde fugit commodi! Perferendis maxime repudiandae nemo.",
+            "alt": "monitor"
+          },
+          "ar": {
+            "name": "شاشة ألعاب IPS LCD",
+            "description": "لوريم إيبسوم دولور سيت أميت كونسيكتيتور أديبيسيسينغ إيليت. كواس إكسبليتابو لابوروم دوكيموس إيرور؟ كو نون كوام ريكوساندي. موليستياي ألياس فيل كولبا عد ديكتا أوند فيجيت كومودي! بيرفيرينديس ماكسيم ريبودياندي نيمو.",
+            "alt": "شاشة"
+          }
+        },
+        "price": 400,
+        "discount_price": 370,
+        "discount-percentage": "50%",
+        "img": "/flash-sales-img/monitor.png",
+        "stars": 5,
+        "reviews": 80,
+        "times rated": 99
+      },
+      {
+        "id": "flsp4",
+        "translations": {
+          "en": {
+            "name": "S-Series Comfort Chair",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo laborum ducimus error? Quo non quam recusandae. Molestiae alias vel culpa ad dicta unde fugit commodi! Perferendis maxime repudiandae nemo.",
+            "alt": "chair"
+          },
+          "ar": {
+            "name": "كرسي الراحة S-Series",
+            "description": "لوريم إيبسوم دولور سيت أميت كونسيكتيتور أديبيسيسينغ إيليت. كواس إكسبليتابو لابوروم دوكيموس إيرور؟ كو نون كوام ريكوساندي. موليستياي ألياس فيل كولبا عد ديكتا أوند فيجيت كومودي! بيرفيرينديس ماكسيم ريبودياندي نيمو.",
+            "alt": "كرسي"
+          }
+        },
+        "price": 400,
+        "discount_price": 375,
+        "discount-percentage": "40%",
+        "img": "/flash-sales-img/chair.png",
+        "stars": 3.9,
+        "reviews": 90,
+        "times rated": 99
+      },
+      {
+        "id": "flsp5",
+        "translations": {
+          "en": {
+            "name": "Quilted Satin Jacket",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo laborum ducimus error? Quo non quam recusandae. Molestiae alias vel culpa ad dicta unde fugit commodi! Perferendis maxime repudiandae nemo.",
+            "alt": "jacket"
+          },
+          "ar": {
+            "name": "سترة ساتان مبطنة",
+            "description": "لوريم إيبسوم دولور سيت أميت كونسيكتيتور أديبيسيسينغ إيليت. كواس إكسبليتابو لابوروم دوكيموس إيرور؟ كو نون كوام ريكوساندي. موليستياي ألياس فيل كولبا عد ديكتا أوند فيجيت كومودي! بيرفيرينديس ماكسيم ريبودياندي نيمو.",
+            "alt": "سترة"
+          }
+        },
+        "price": 660,
+        "discount_price": 470,
+        "discount-percentage": "42%",
+        "img": "/flash-sales-img/jacket.png",
+        "stars": 5,
+        "reviews": 90,
+        "times rated": 55
+      },
+      {
+        "id": "flsp6",
+        "translations": {
+          "en": {
+            "name": "ASUS FHD Gaming Laptop",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo laborum ducimus error? Quo non quam recusandae. Molestiae alias vel culpa ad dicta unde fugit commodi! Perferendis maxime repudiandae nemo.",
+            "alt": "laptop"
+          },
+          "ar": {
+            "name": "لابتوب ألعاب ASUS FHD",
+            "description": "لوريم إيبسوم دولور سيت أميت كونسيكتيتور أديبيسيسينغ إيليت. كواس إكسبليتابو لابوروم دوكيموس إيرور؟ كو نون كوام ريكوساندي. موليستياي ألياس فيل كولبا عد ديكتا أوند فيجيت كومودي! بيرفيرينديس ماكسيم ريبودياندي نيمو.",
+            "alt": "لابتوب"
+          }
+        },
+        "price": 700,
+        "discount_price": 570,
+        "discount-percentage": "20%",
+        "img": "/flash-sales-img/laptop.png",
+        "stars": 5,
+        "reviews": 110,
+        "times rated": 325
+      },
+      {
+        "id": "jstfy1",
+        "translations": {
+          "en": {
+            "name": "ASUS FHD Gaming Laptop",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo laborum ducimus error? Quo non quam recusandae. Molestiae alias vel culpa ad dicta unde fugit commodi! Perferendis maxime repudiandae nemo.",
+            "alt": "laptop"
+          },
+          "ar": {
+            "name": "لابتوب ألعاب ASUS FHD",
+            "description": "لوريم إيبسوم دولور سيت أميت كونسيكتيتور أديبيسيسينغ إيليت. كواس إكسبليتابو لابوروم دوكيموس إيرور؟ كو نون كوام ريكوساندي. موليستياي ألياس فيل كولبا عد ديكتا أوند فيجيت كومودي! بيرفيرينديس ماكسيم ريبودياندي نيمو.",
+            "alt": "لابتوب"
+          }
+        },
+        "price": 700,
+        "discount_price": 570,
+        "discount-percentage": "20%",
+        "img": "/flash-sales-img/laptop.png",
+        "stars": 5,
+        "reviews": 130,
+        "times rated": 325
+      },
+      {
+        "id": "jstfy2",
+        "translations": {
+          "en": {
+            "name": "IPS LCD Gaming Monitor",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo laborum ducimus error? Quo non quam recusandae. Molestiae alias vel culpa ad dicta unde fugit commodi! Perferendis maxime repudiandae nemo.",
+            "alt": "monitor"
+          },
+          "ar": {
+            "name": "شاشة ألعاب IPS LCD",
+            "description": "لوريم إيبسوم دولور سيت أميت كونسيكتيتور أديبيسيسينغ إيليت. كواس إكسبليتابو لابوروم دوكيموس إيرور؟ كو نون كوام ريكوساندي. موليستياي ألياس فيل كولبا عد ديكتا أوند فيجيت كومودي! بيرفيرينديس ماكسيم ريبودياندي نيمو.",
+            "alt": "شاشة"
+          }
+        },
+        "price": 400,
+        "discount_price": 370,
+        "discount-percentage": "50%",
+        "img": "/flash-sales-img/monitor.png",
+        "stars": 5,
+        "reviews": 130,
+        "times rated": 99
+      },
+      {
+        "id": "jstfy3",
+        "translations": {
+          "en": {
+            "name": "HAVIT HV-G92 Gamepad",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo laborum ducimus error? Quo non quam recusandae. Molestiae alias vel culpa ad dicta unde fugit commodi! Perferendis maxime repudiandae nemo.",
+            "alt": "game pad"
+          },
+          "ar": {
+            "name": "لعبة HAVIT HV-G92",
+            "description": "لوريم إيبسوم دولور سيت أميت كونسيكتيتور أديبيسيسينغ إيليت. كواس إكسبليتابو لابوروم دوكيموس إيرور؟ كو نون كوام ريكوساندي. موليستياي ألياس فيل كولبا عد ديكتا أوند فيجيت كومودي! بيرفيرينديس ماكسيم ريبودياندي نيمو.",
+            "alt": "لوحة ألعاب"
+          }
+        },
+        "price": 160,
+        "discount_price": 126,
+        "discount-percentage": "40%",
+        "img": "/flash-sales-img/game-pad.png",
+        "stars": 5,
+        "reviews": 150,
+        "times rated": 88
+      },
+      {
+        "id": "jstfy4",
+        "translations": {
+          "en": {
+            "name": "AK-900 Wired Keyboard",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo laborum ducimus error? Quo non quam recusandae. Molestiae alias vel culpa ad dicta unde fugit commodi! Perferendis maxime repudiandae nemo.",
+            "alt": "keyboard"
+          },
+          "ar": {
+            "name": "لوحة مفاتيح AK-900 السلكية",
+            "description": "لوريم إيبسوم دولور سيت أميت كونسيكتيتور أديبيسيسينغ إيليت. كواس إكسبليتابو لابوروم دوكيموس إيرور؟ كو نون كوام ريكوساندي. موليستياي ألياس فيل كولبا عد ديكتا أوند فيجيت كومودي! بيرفيرينديس ماكسيم ريبودياندي نيمو.",
+            "alt": "لوحة مفاتيح"
+          }
+        },
+        "price": 1160,
+        "discount_price": 960,
+        "discount-percentage": "35%",
+        "img": "/flash-sales-img/keyboard.png",
+        "stars": 5,
+        "reviews": 150,
+        "times rated": 75
+      },
+      {
+        "id": "it1",
+        "translations": {
+          "en": {
+            "name": "HAVIT HV-G92 Gamepad",
+            "alt": "game pad"
+          },
+          "ar": {
+            "name": "لعبة HAVIT HV-G92",
+            "alt": "لوحة ألعاب"
+          }
+        },
+        "price": 160,
+        "discount_price": 126,
+        "img": "/flash-sales-img/game-pad.png",
+        "stars": 5,
+        "times rated": 88
+      },
+      {
+        "id": "it2",
+        "translations": {
+          "en": {
+            "name": "AK-900 Wired Keyboard",
+            "alt": "keyboard"
+          },
+          "ar": {
+            "name": "لوحة مفاتيح AK-900 السلكية",
+            "alt": "لوحة مفاتيح"
+          }
+        },
+        "price": 1160,
+        "discount_price": 960,
+        "img": "/flash-sales-img/keyboard.png",
+        "stars": 5,
+        "times rated": 75
+      }    
   ]
 }

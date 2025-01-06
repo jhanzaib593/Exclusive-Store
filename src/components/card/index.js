@@ -2,9 +2,12 @@ import React from "react";
 import { HeartOutlined, EyeOutlined } from "@ant-design/icons";
 import "./index.css";
 import { Card, Button, Tag, Tooltip, Rate } from "antd";
+import { useTranslation } from "react-i18next";
 const { Meta } = Card;
 
 const ProductCard = (props) => {
+  const { t } = useTranslation();
+
   return (
     <Card
       hoverable
@@ -28,7 +31,7 @@ const ProductCard = (props) => {
             </Tooltip>
           </div>
           <Button type="primary" block className="add-to-cart">
-            Add To Cart
+            {t("AddToCart")}
           </Button>
         </div>
       }

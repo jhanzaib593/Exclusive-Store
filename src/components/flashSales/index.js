@@ -2,7 +2,10 @@ import React, { useState, useEffect } from "react";
 import "./index.css";
 import { Col, Row } from "antd";
 import ProductSlider from "./product";
+import { useTranslation } from "react-i18next";
 export default function CountdownTimer() {
+  const { t } = useTranslation();
+
   const [targetDate] = useState(() => {
     const initialDate = new Date();
     initialDate.setDate(initialDate.getDate() + 6);
@@ -47,34 +50,34 @@ export default function CountdownTimer() {
   return (
     <section className="flash-sales">
       <div className="header">
-        <h4 className="today">Today's</h4>
+        <h4 className="today"> {t("Today")}</h4>
         <div className="timer">
           <Row>
             <Col sm={8} md={8} style={{ paddingTop: "1em" }}>
-              <h2>Flash Sales</h2>
+              <h2>{t("FlashSales")}</h2>
             </Col>
             <Col sm={16} md={16}>
               <div className="countdown">
                 <div>
-                  <p>Days</p>
+                  <p>{t("Days")}</p>
                   <span>{timeLeft.days}</span> :
                 </div>
                 <span className="text-2xl">:</span>
 
                 <div>
-                  <p>Hours</p>
+                  <p>{t("Hours")}</p>
                   <span>{timeLeft.hours}</span>
                 </div>
                 <span className="text-2xl">:</span>
 
                 <div>
-                  <p>Minutes</p>
+                  <p>{t("Minutes")}</p>
                   <span>{timeLeft.minutes}</span>
                 </div>
                 <span className="text-2xl">:</span>
 
                 <div>
-                  <p>Seconds</p>
+                  <p>{t("Seconds")}</p>
                   <span>{timeLeft.seconds}</span>
                 </div>
               </div>

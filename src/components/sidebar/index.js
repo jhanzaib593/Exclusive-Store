@@ -5,20 +5,81 @@ import "./index.css";
 
 const categories = [
   {
-    name: "Woman's Fashion",
-    subcategories: ["Dresses", "Shoes", "Bags", "Accessories"],
+    en: {
+      name: "Woman's Fashion",
+      subcategories: ["Dresses", "Shoes", "Bags", "Accessories"],
+    },
+    ar: {
+      name: "أزياء النساء",
+      subcategories: ["فساتين", "أحذية", "حقائب", "إكسسوارات"],
+    },
   },
   {
-    name: "Men's Fashion",
-    subcategories: ["Shirts", "Shoes", "Watches", "Accessories"],
+    en: {
+      name: "Men's Fashion",
+      subcategories: ["Shirts", "Shoes", "Watches", "Accessories"],
+    },
+    ar: {
+      name: "أزياء الرجال",
+      subcategories: ["قمصان", "أحذية", "ساعات", "إكسسوارات"],
+    },
   },
-  { name: "Electronics" },
-  { name: "Home & Lifestyle" },
-  { name: "Medicine" },
-  { name: "Sports & Outdoor" },
-  { name: "Baby's & Toys" },
-  { name: "Groceries & Pets" },
-  { name: "Health & Beauty" },
+  {
+    en: {
+      name: "Electronics",
+    },
+    ar: {
+      name: "الإلكترونيات",
+    },
+  },
+  {
+    en: {
+      name: "Home & Lifestyle",
+    },
+    ar: {
+      name: "المنزل والحياة",
+    },
+  },
+  {
+    en: {
+      name: "Medicine",
+    },
+    ar: {
+      name: "الطب",
+    },
+  },
+  {
+    en: {
+      name: "Sports & Outdoor",
+    },
+    ar: {
+      name: "الرياضة والهواء الطلق",
+    },
+  },
+  {
+    en: {
+      name: "Baby's & Toys",
+    },
+    ar: {
+      name: "ألعاب الأطفال",
+    },
+  },
+  {
+    en: {
+      name: "Groceries & Pets",
+    },
+    ar: {
+      name: "البقالة والحيوانات الأليفة",
+    },
+  },
+  {
+    en: {
+      name: "Health & Beauty",
+    },
+    ar: {
+      name: "الصحة والجمال",
+    },
+  },
 ];
 
 const SideBar = () => {
@@ -32,26 +93,36 @@ const SideBar = () => {
     setIsDrawerVisible(false);
   };
 
-  const renderMenu = () => (
-    <Menu mode="vertical" className="sidebar-menu">
-      {categories.map((category, index) =>
-        category.subcategories ? (
-          <Menu.SubMenu
-            key={index}
-            title={<span className="menu-item">{category.name}</span>}
-          >
-            {category.subcategories.map((subcategory, subIndex) => (
-              <Menu.Item key={`${index}-${subIndex}`}>{subcategory}</Menu.Item>
-            ))}
-          </Menu.SubMenu>
-        ) : (
-          <Menu.Item key={index}>
-            <span className="menu-item">{category.name}</span>
-          </Menu.Item>
-        )
-      )}
-    </Menu>
-  );
+  const renderMenu = () => {
+    // Get the current language from localStorage
+    const language = localStorage.getItem("i18nextLng");
+
+    return (
+      <Menu mode="vertical" className="sidebar-menu">
+        {categories.map((category, index) => {
+          const categoryName = category[language]?.name;
+          const subcategories = category[language]?.subcategories;
+
+          return subcategories ? (
+            <Menu.SubMenu
+              key={index}
+              title={<span className="menu-item">{categoryName}</span>}
+            >
+              {subcategories.map((subcategory, subIndex) => (
+                <Menu.Item key={`${index}-${subIndex}`}>
+                  {subcategory}
+                </Menu.Item>
+              ))}
+            </Menu.SubMenu>
+          ) : (
+            <Menu.Item key={index}>
+              <span className="menu-item">{categoryName}</span>
+            </Menu.Item>
+          );
+        })}
+      </Menu>
+    );
+  };
 
   return (
     <div>

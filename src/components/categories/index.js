@@ -4,9 +4,12 @@ import { Col, Row, Spin } from "antd";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useTranslation } from "react-i18next";
 
 export default function Categories() {
-  const [categorie, setCategorie] = useState([]);
+  const { t, i18n } = useTranslation();
+
+  const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(false);
 
   const getCategories = async () => {
@@ -20,7 +23,18 @@ export default function Categories() {
       }
 
       const data = await response.json();
-      setCategorie(data.categories || []);
+      const allCategories = data.categories;
+
+      const translatedCategories = allCategories.map((category) => {
+        const translated = category.translations?.[i18n.language] || {};
+        return {
+          ...category,
+          title: translated.title || category.title, // Fallback to default title if no translation
+          alt: translated.alt || category.alt,
+        };
+      });
+
+      setCategories(translatedCategories || []);
     } catch (error) {
       console.error("Failed to fetch Categories:", error);
     } finally {
@@ -30,7 +44,7 @@ export default function Categories() {
 
   useEffect(() => {
     getCategories();
-  }, []);
+  }, [i18n.language]); // Add i18n.language as a dependency to refetch on language change
 
   // Slider settings
   const settings = {
@@ -61,11 +75,11 @@ export default function Categories() {
   return (
     <section className="categories">
       <div className="header">
-        <h4 className="today">Categories</h4>
+        <h4 className="today">{t("Categories")}</h4>
         <Row>
           <Col sm={8} md={8} style={{ padding: "2em 0" }}>
             <h2 style={{ fontWeight: 600, fontSize: "30px" }}>
-              Browse By Category
+              {t("BrowseByCategory")}
             </h2>
           </Col>
           <Col sm={16} md={16}></Col>
@@ -77,11 +91,11 @@ export default function Categories() {
           <Spin size="large" />
         ) : (
           <Slider {...settings}>
-            {categorie && categorie.length > 0 ? (
-              categorie.map((categore, index) => (
-                <div key={index} className="categorie-main">
-                  <div className="categorie-card">
-                    <h1>{categore.title}</h1>
+            {categories && categories.length > 0 ? (
+              categories.map((category, index) => (
+                <div key={index} className="category-main">
+                  <div className="category-card">
+                    <h1>{category.title}</h1>
                   </div>
                 </div>
               ))
