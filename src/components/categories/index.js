@@ -53,7 +53,7 @@ export default function Categories() {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
-    autoplay: false,
+    autoplay: true,
     responsive: [
       {
         breakpoint: 1024, // Tablet
@@ -95,7 +95,13 @@ export default function Categories() {
               categories.map((category, index) => (
                 <div key={index} className="category-main">
                   <div className="category-card">
-                    <h1>{category.title}</h1>
+                    <img
+                      class="category-img"
+                      src={category.icon}
+                      alt={category.alt}
+                    />
+
+                    <h3>{category.title}</h3>
                   </div>
                 </div>
               ))

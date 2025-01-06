@@ -1,0 +1,88 @@
+{
+    "categories": [
+        {
+            "id": "ca1",
+            "translations": {
+                "en": {
+                    "title": "Phones",
+                    "alt": "phone"
+                },
+                "ar": {
+                    "title": "هواتف",
+                    "alt": "هاتف"
+                }
+            },
+            "icon": "/categories-img/phones.svg"
+        },
+        {
+            "id": "ca2",
+            "translations": {
+                "en": {
+                    "title": "Computers",
+                    "alt": "computers"
+                },
+                "ar": {
+                    "title": "أجهزة الكمبيوتر",
+                    "alt": "أجهزة الكمبيوتر"
+                }
+            },
+            "icon": "/categories-img/computers.svg"
+        },
+        {
+            "id": "ca3",
+            "translations": {
+                "en": {
+                    "title": "SmartWatch",
+                    "alt": "smartwatches"
+                },
+                "ar": {
+                    "title": "الساعات الذكية",
+                    "alt": "الساعات الذكية"
+                }
+            },
+            "icon": "/categories-img/smartwatches.svg"
+        },
+        {
+            "id": "ca4",
+            "translations": {
+                "en": {
+                    "title": "Camera",
+                    "alt": "camera"
+                },
+                "ar": {
+                    "title": "كاميرا",
+                    "alt": "كاميرا"
+                }
+            },
+            "icon": "/categories-img/camera.svg"
+        },
+        {
+            "id": "ca5",
+            "translations": {
+                "en": {
+                    "title": "HeadPhones",
+                    "alt": "headphones"
+                },
+                "ar": {
+                    "title": "سماعات الرأس",
+                    "alt": "سماعات الرأس"
+                }
+            },
+            "icon": "/categories-img/headphones.svg"
+        },
+        {
+            "id": "ca6",
+            "translations": {
+                "en": {
+                    "title": "Games",
+                    "alt": "gamepads"
+                },
+                "ar": {
+                    "title": "ألعاب",
+                    "alt": "ألعاب"
+                }
+            },
+            "icon": "/categories-img/gamepads.svg"
+        }
+    ]
+}

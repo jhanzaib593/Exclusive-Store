@@ -9,9 +9,22 @@
     padding: 10px;
     /* margin: 0 10px; */
     /* border: 1px solid #F5F5F5; */
+    display: flex;
+        justify-content: center;
 
 }
 
 .category-card {
     border: 1px solid #F5F5F5;
+    text-align: center;
+        padding: 3em 1em;
+        border-radius: 5px;
+    }
+    
+    .category-img {
+        margin: auto;
+    }
+    
+    .category-card:hover {
+        background-color: #db4444;
 }
