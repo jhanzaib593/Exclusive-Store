@@ -8,6 +8,12 @@ const { Meta } = Card;
 const ProductCard = (props) => {
   const { t } = useTranslation();
 
+  const addToCart = (data) => {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart.push(data);
+    localStorage.setItem("cart", JSON.stringify(cart));
+  };
+
   return (
     <Card
       hoverable
@@ -30,7 +36,13 @@ const ProductCard = (props) => {
               <EyeOutlined className="icon-button" />
             </Tooltip>
           </div>
-          <Button type="primary" block className="add-to-cart">
+
+          <Button
+            type="primary"
+            block
+            className="add-to-cart"
+            onClick={() => addToCart(props)}
+          >
             {t("AddToCart")}
           </Button>
         </div>

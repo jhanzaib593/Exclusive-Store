@@ -1,0 +1,31 @@
+.cart-table {
+    padding: 10em 0;
+}
+
+.cart-table tr {
+    background-color: white !important;
+    box-shadow: 1px 1px 4px gray !important;
+    border: none !important;
+
+}
+
+.cart-table tr th {
+    background-color: white !important;
+    border: none !important;
+    padding: 1em 0 !important;
+
+}
+
+.custom-table thead>tr>th {
+    padding: 16px;
+    /* Header cell padding */
+    text-align: left;
+    /* Optional: align text */
+}
+
+.custom-table tbody>tr>td {
+    padding: 12px;
+    /* Body cell padding */
+    vertical-align: middle;
+    /* Optional: align content */
+}

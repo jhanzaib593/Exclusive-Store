@@ -13,6 +13,11 @@ import { useTranslation } from "react-i18next";
 const Header = () => {
   const { t } = useTranslation();
 
+  const productarry = localStorage.getItem("cart");
+
+  const initialValue = productarry ? JSON.parse(productarry) : [];
+  console.log("initialValue", initialValue.length);
+
   const [top, setTop] = React.useState(0);
   const [open, setOpen] = useState(false);
   console.log(setTop);
@@ -103,6 +108,7 @@ const Header = () => {
                     className="icon_cart"
                     style={{ fontSize: "25px" }}
                   />
+                  {`${initialValue.length}`}
                 </div>
               </Col>
 
