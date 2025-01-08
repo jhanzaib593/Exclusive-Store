@@ -3,8 +3,19 @@ import "./index.css"; // Custom CSS for styling
 import Header from "../header";
 import { TopBanner } from "../top-bar";
 import { Breadcrumb } from "antd";
+import { useTranslation } from "react-i18next";
 
 export const Cart = () => {
+  const { t, i18n } = useTranslation();
+  const currenciesData = JSON.parse(localStorage.getItem("currencies")) || [];
+
+  const formatPrice = (price, currency) => {
+    return new Intl.NumberFormat("en-US", {
+      style: "currency",
+      currency: currency,
+    }).format(price);
+  };
+
   const productArray = localStorage.getItem("cart");
   const initialValue = productArray ? JSON.parse(productArray) : [];
   const [cart, setCart] = useState(initialValue);
@@ -26,7 +37,7 @@ export const Cart = () => {
   const calculateSubtotal = () => {
     return cart.reduce((total, item) => {
       const quantity = item.quantity || 1; // Default to 1 if quantity is undefined
-      const price = item.discountprice || item.productprice; // Use discountprice if available, otherwise productprice
+      const price = item.discount_price || item.price; // Use discountprice if available, otherwise productprice
       return total + price * quantity;
     }, 0);
   };
@@ -77,14 +88,22 @@ export const Cart = () => {
                       <td>
                         <div style={{ display: "flex", alignItems: "center" }}>
                           <img
-                            src={item.productimg}
-                            alt={item.productname}
+                            src={item.img}
+                            alt={item.translations?.[i18n.language].name}
                             style={{ width: 50, marginRight: 10 }}
                           />
-                          {item.productname}
+                          {item.translations?.[i18n.language].name}
                         </div>
                       </td>
-                      <td>${item.discountprice || item.productprice}</td>
+                      {/* <td>${item.discount_price || item.price}</td> */}
+                      <td>
+                        {formatPrice(
+                          (item.discount_price || item.price) *
+                            currenciesData.getExchangeRate,
+                          currenciesData.selectedCurrency
+                        )}
+                      </td>
+
                       <td>
                         <input
                           type="number"
@@ -99,14 +118,24 @@ export const Cart = () => {
                           style={{ width: "60px" }}
                         />
                       </td>
-                      <td>
+                      {/* <td>
                         $
                         {(
-                          (item.discountprice || item.productprice) *
+                          (item.discount_price || item.price) *
                           (item.quantity || 1)
                         ).toFixed(2)}
+                      </td> */}
+                      <td>
+                        $
+                        {formatPrice(
+                          (item.discount_price || item.price) *
+                            (item.quantity || 1) *
+                            currenciesData.getExchangeRate,
+                          currenciesData.selectedCurrency
+                        )}
                       </td>
                     </tr>
+
                     <br />
                     <br />
                   </>
@@ -130,9 +159,23 @@ export const Cart = () => {
 
               <div className="cart-total">
                 <h3>Cart Total</h3>
-                <p>Subtotal: ${calculateSubtotal().toFixed(2)}</p>
+                <p>
+                  Subtotal:
+                  {formatPrice(
+                    calculateSubtotal().toFixed(2) *
+                      currenciesData.getExchangeRate,
+                    currenciesData.selectedCurrency
+                  )}
+                </p>
                 <p>Shipping: Free</p>
-                <p>Total: ${calculateSubtotal().toFixed(2)}</p>
+                <p>
+                  Total:{" "}
+                  {formatPrice(
+                    calculateSubtotal().toFixed(2) *
+                      currenciesData.getExchangeRate,
+                    currenciesData.selectedCurrency
+                  )}
+                </p>
                 <button className="primary-btn">Proceed to Checkout</button>
               </div>
             </div>

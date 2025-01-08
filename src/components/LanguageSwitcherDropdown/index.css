@@ -1,0 +1,10 @@
+.language-switcher {
+    background-color: transparent !important;
+    color: white !important;
+}
+
+.language-switcher:hover {
+    background-color: transparent !important;
+
+    color: #DB4444 !important;
+}

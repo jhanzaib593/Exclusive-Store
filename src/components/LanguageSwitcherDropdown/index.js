@@ -2,6 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { Dropdown, Menu, Button } from "antd";
 import { DownOutlined } from "@ant-design/icons";
+import "./index.css";
 
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
@@ -23,7 +24,7 @@ const LanguageSwitcher = () => {
   return (
     <div>
       <Dropdown overlay={menu} trigger={["click"]}>
-        <Button>
+        <Button className="language-switcher">
           {i18n.language === "en" ? "English" : "العربية"} <DownOutlined />
         </Button>
       </Dropdown>

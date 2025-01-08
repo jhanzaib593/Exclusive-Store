@@ -16,11 +16,9 @@ const Header = () => {
   const productarry = localStorage.getItem("cart");
 
   const initialValue = productarry ? JSON.parse(productarry) : [];
-  console.log("initialValue", initialValue.length);
 
   const [top, setTop] = React.useState(0);
   const [open, setOpen] = useState(false);
-  console.log(setTop);
 
   const showDrawer = () => {
     setOpen(true);
@@ -46,7 +44,9 @@ const Header = () => {
               </Col>
               <Col span={17} className="sreach_bar">
                 <div className="nav">
-                  <NavLink className="nav_link">{t("Home")}</NavLink>
+                  <Link to="/" className="nav_link">
+                    {t("Home")}
+                  </Link>
                   <NavLink className="nav_link">{t("Contact")}</NavLink>
                   <NavLink className="nav_link">{t("About")}</NavLink>
                   <NavLink className="nav_link">{t("SignUp")}</NavLink>

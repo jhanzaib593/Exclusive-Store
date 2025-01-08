@@ -13,7 +13,7 @@
     }
     
     .cart-table tr {
-        box-shadow: 0 4px 27px -18px gray;
+        box-shadow: 0 4px 27px 0px #FAFAFA;
         }
         
         .cart-table th {
@@ -91,4 +91,9 @@ p {
 
 .cart-table-header tr th {
     padding: 20px 10px;
+    font-weight: 500;
+    }
+    
+    .empty-cart {
+        text-align: center;
 }

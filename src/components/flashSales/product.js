@@ -47,6 +47,7 @@ const ProductSlider = () => {
       setLoading(false);
     }
   };
+  // console.log("products", products);
 
   useEffect(() => {
     getProducts();
@@ -88,15 +89,17 @@ const ProductSlider = () => {
         ) : (
           <Slider {...settings}>
             {products.slice(0, 10).map((product) => (
+              // console.log("product", product),
               <div key={product.id} className="product-card">
                 <ProductCard
-                  _id={product.id}
-                  productprice={product.price}
-                  discountprice={product.discount_price}
-                  productname={product.name}
-                  productimg={product.img}
-                  productstars={product.stars}
-                  productreviews={product.reviews}
+                  // _id={product.id}
+                  // productprice={product.price}
+                  // discountprice={product.discount_price}
+                  // productname={product.name}
+                  // productimg={product.img}
+                  // productstars={product.stars}
+                  // productreviews={product.reviews}
+                  {...product} // Pass all product properties as props
                 />
               </div>
             ))}
