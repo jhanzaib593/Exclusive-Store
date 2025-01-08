@@ -9,10 +9,11 @@ export function TopBanner() {
   const { t } = useTranslation();
   const datacurrencies = JSON.parse(localStorage.getItem("currencies")) || [];
 
-  const av = datacurrencies.selectedCurrency;
 
   const currencies = ["USD", "AED", "SAR"]; // Supported currencies
-  const [selectedCurrency, setSelectedCurrency] = useState(av);
+  const [selectedCurrency, setSelectedCurrency] = useState(
+    datacurrencies.selectedCurrency || "USD"
+  );
   const [exchangeRates, setExchangeRates] = useState({});
 
   const fetchExchangeRates = async (baseCurrency) => {
