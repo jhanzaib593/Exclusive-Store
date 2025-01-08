@@ -64,7 +64,11 @@
 }
 
 .icon_cart:hover {
-  color: #DB4444;
+  color: #DB4444 !important;
+  }
+  
+  .ant-badge {
+    margin: auto !important;
 }
 
 :where(.css-dev-only-do-not-override-161f05s).ant-col-12 {

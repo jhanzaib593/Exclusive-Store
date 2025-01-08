@@ -1,4 +1,4 @@
-import { Col, Row, Affix, Input, Drawer, Button } from "antd";
+import { Col, Row, Affix, Input, Drawer, Button, Badge, Avatar } from "antd";
 import "./index.css";
 import React, { useState } from "react";
 import {
@@ -7,7 +7,7 @@ import {
   SearchOutlined,
   ShoppingCartOutlined,
 } from "@ant-design/icons";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 const Header = () => {
@@ -104,11 +104,31 @@ const Header = () => {
                     className="icon_cart"
                     style={{ fontSize: "25px" }}
                   />
-                  <ShoppingCartOutlined
+                  {/* <Link
+                    to="/cart"
+                    style={{ textDecoration: "none", color: "black" }}
+                  >
+                    <ShoppingCartOutlined
+                      className="icon_cart"
+                      style={{ fontSize: "25px" }}
+                    />
+                    <sup> {`${initialValue.length}`}</sup>
+                  </Link> */}
+                  <Badge
                     className="icon_cart"
-                    style={{ fontSize: "25px" }}
-                  />
-                  {`${initialValue.length}`}
+                    style={{ margin: "auto" }}
+                    count={initialValue.length}
+                  >
+                    <Avatar
+                      className="icon_cart"
+                      style={{
+                        backgroundColor: "transparent",
+                        color: "black",
+                        fontSize: "25px",
+                      }}
+                      icon={<ShoppingCartOutlined />}
+                    />
+                  </Badge>
                 </div>
               </Col>
 
