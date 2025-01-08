@@ -10,6 +10,10 @@ const ProductCard = (props) => {
   const currenciesData = JSON.parse(localStorage.getItem("currencies")) || [];
 
   const formatPrice = (price, currency) => {
+    if (!currency) {
+      console.error("Currency code is required with currency style.");
+      return price; // Return the raw price if currency is invalid
+    }
     return new Intl.NumberFormat("en-US", {
       style: "currency",
       currency: currency,
