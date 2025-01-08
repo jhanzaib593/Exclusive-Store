@@ -43,88 +43,101 @@ export const Cart = () => {
               title: "Home",
               href: "/",
             },
-
             {
               title: "Cart",
             },
           ]}
           style={{ padding: "5em 0" }}
         />
-        {/* Cart Table */}
-        <table className="cart-table">
-          <thead className="cart-table-header">
-            <tr style={{ padding: "10em 0" }}>
-              <th>Product</th>
-              <th>Price</th>
-              <th>Quantity</th>
-              <th>Subtotal</th>
-            </tr>
-          </thead>
-          <br />
-          <br />
-          <tbody>
-            {cart.map((item, index) => (
-              <>
-                <tr key={index}>
-                  <td>
-                    <div style={{ display: "flex", alignItems: "center" }}>
-                      <img
-                        src={item.productimg}
-                        alt={item.productname}
-                        style={{ width: 50, marginRight: 10 }}
-                      />
-                      {item.productname}
-                    </div>
-                  </td>
-                  <td>${item.discountprice || item.productprice}</td>
-                  <td>
-                    <input
-                      type="number"
-                      min="0"
-                      value={item.quantity || 1}
-                      onChange={(e) =>
-                        updateQuantity(item._id, parseInt(e.target.value, 10))
-                      }
-                      style={{ width: "60px" }}
-                    />
-                  </td>
-                  <td>
-                    $
-                    {(
-                      (item.discountprice || item.productprice) *
-                      (item.quantity || 1)
-                    ).toFixed(2)}
-                  </td>
+
+        {/* Check if cart is empty */}
+        {cart.length === 0 ? (
+          <div className="empty-cart">
+            <p>Your cart is currently empty.</p>
+            <button className="default-btn">Continue Shopping</button>
+          </div>
+        ) : (
+          <>
+            {/* Cart Table */}
+            <table className="cart-table">
+              <thead className="cart-table-header">
+                <tr style={{ padding: "10em 0" }}>
+                  <th>Product</th>
+                  <th>Price</th>
+                  <th>Quantity</th>
+                  <th>Subtotal</th>
                 </tr>
-                <br />
-                <br />
-              </>
-            ))}
-          </tbody>
-        </table>
+              </thead>
+              <br />
+              <br />
+              <tbody>
+                {cart.map((item, index) => (
+                  <>
+                    <tr key={index}>
+                      <td>
+                        <div style={{ display: "flex", alignItems: "center" }}>
+                          <img
+                            src={item.productimg}
+                            alt={item.productname}
+                            style={{ width: 50, marginRight: 10 }}
+                          />
+                          {item.productname}
+                        </div>
+                      </td>
+                      <td>${item.discountprice || item.productprice}</td>
+                      <td>
+                        <input
+                          type="number"
+                          min="0"
+                          value={item.quantity || 1}
+                          onChange={(e) =>
+                            updateQuantity(
+                              item._id,
+                              parseInt(e.target.value, 10)
+                            )
+                          }
+                          style={{ width: "60px" }}
+                        />
+                      </td>
+                      <td>
+                        $
+                        {(
+                          (item.discountprice || item.productprice) *
+                          (item.quantity || 1)
+                        ).toFixed(2)}
+                      </td>
+                    </tr>
+                    <br />
+                    <br />
+                  </>
+                ))}
+              </tbody>
+            </table>
 
-        {/* Actions */}
-        <div className="actions">
-          <button className="default-btn">Return To Shop</button>
-          <button className="primary-btn">Update Cart</button>
-        </div>
+            {/* Actions */}
+            <div className="actions">
+              <button className="default-btn">Return To Shop</button>
+              <button className="primary-btn">Update Cart</button>
+            </div>
 
-        {/* Coupon and Cart Summary */}
-        <div className="coupon-summary">
-          <div className="apply-coupon">
-            <h3>Apply Coupon</h3>
-            <input type="text" placeholder="Coupon Code" />
-            <button className="primary-btn">Apply Coupon</button>
-          </div>
+            {/* Coupon and Cart Summary */}
+            <div className="coupon-summary">
+              <div className="apply-coupon">
+                <h3>Apply Coupon</h3>
+                <input type="text" placeholder="Coupon Code" />
+                <button className="primary-btn">Apply Coupon</button>
+              </div>
 
-          <div className="cart-total">
-            <h3>Cart Total</h3>
-            <p>Subtotal: ${calculateSubtotal().toFixed(2)}</p>
-            <p>Shipping: Free</p>
-            <p>Total: ${calculateSubtotal().toFixed(2)}</p>
-            <button className="primary-btn">Proceed to Checkout</button>
-          </div>
-        </div>
+              <div className="cart-total">
+                <h3>Cart Total</h3>
+                <p>Subtotal: ${calculateSubtotal().toFixed(2)}</p>
+                <p>Shipping: Free</p>
+                <p>Total: ${calculateSubtotal().toFixed(2)}</p>
+                <button className="primary-btn">Proceed to Checkout</button>
+              </div>
+            </div>
+          </>
+        )}
       </div>
     </>
   );

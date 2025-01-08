@@ -104,31 +104,23 @@ const Header = () => {
                     className="icon_cart"
                     style={{ fontSize: "25px" }}
                   />
-                  {/* <Link
-                    to="/cart"
-                    style={{ textDecoration: "none", color: "black" }}
-                  >
-                    <ShoppingCartOutlined
+                  <Link to="/cart">
+                    <Badge
                       className="icon_cart"
-                      style={{ fontSize: "25px" }}
-                    />
-                    <sup> {`${initialValue.length}`}</sup>
-                  </Link> */}
-                  <Badge
-                    className="icon_cart"
-                    style={{ margin: "auto" }}
-                    count={initialValue.length}
-                  >
-                    <Avatar
-                      className="icon_cart"
-                      style={{
-                        backgroundColor: "transparent",
-                        color: "black",
-                        fontSize: "25px",
-                      }}
-                      icon={<ShoppingCartOutlined />}
-                    />
-                  </Badge>
+                      style={{ margin: "auto" }}
+                      count={initialValue.length}
+                    >
+                      <Avatar
+                        className="icon_cart"
+                        style={{
+                          backgroundColor: "transparent",
+                          color: "black",
+                          fontSize: "25px",
+                        }}
+                        icon={<ShoppingCartOutlined />}
+                      />
+                    </Badge>
+                  </Link>
                 </div>
               </Col>
 
