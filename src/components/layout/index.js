@@ -6,7 +6,7 @@ import { TopBanner } from "../top-bar";
 const Layout = () => {
   return (
     <>
-      <TopBanner />
+      {/* <TopBanner /> */}
       <Header />
       <Outlet />
     </>

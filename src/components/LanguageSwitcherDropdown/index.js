@@ -1,7 +1,5 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { Dropdown, Menu, Button } from "antd";
-import { DownOutlined } from "@ant-design/icons";
 import "./index.css";
 
 const LanguageSwitcher = () => {
@@ -13,21 +11,23 @@ const LanguageSwitcher = () => {
     window.location.reload();
   };
 
-  // Menu items for dropdown
-  const menu = (
-    <Menu onClick={(e) => changeLanguage(e.key)}>
-      <Menu.Item key="en">English</Menu.Item>
-      <Menu.Item key="ar">العربية</Menu.Item>
-    </Menu>
-  );
-
   return (
-    <div>
-      <Dropdown overlay={menu} trigger={["click"]}>
-        <Button className="language-switcher">
-          {i18n.language === "en" ? "English" : "العربية"} <DownOutlined />
-        </Button>
-      </Dropdown>
+    <div className="language-switcher">
+      <span
+        className={i18n.language === "ar" ? "active-language" : "language-link"}
+        onClick={() => changeLanguage("ar")}
+      >
+        العربية
+      </span>
+
+      <span className="separator">/</span>
+
+      <span
+        className={i18n.language === "en" ? "active-language" : "language-link"}
+        onClick={() => changeLanguage("en")}
+      >
+        English
+      </span>
     </div>
   );
 };

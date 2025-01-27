@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
-import { Spin } from "antd";
+import { Row, Spin } from "antd";
 import { Link } from "react-router-dom"; // For routing
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -8,7 +8,7 @@ import "./index.css";
 import ProductCard from "../card"; // Import the ProductCard component
 import { useTranslation } from "react-i18next";
 
-const ProductSlider = () => {
+const ProductDeals = () => {
   const { t, i18n } = useTranslation();
 
   const [products, setProducts] = useState([]);
@@ -47,7 +47,7 @@ const ProductSlider = () => {
       setLoading(false);
     }
   };
-  // console.log("products", products);
+  console.log("products", products);
 
   useEffect(() => {
     getProducts();
@@ -61,6 +61,7 @@ const ProductSlider = () => {
     slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: false,
+    arrows: true, // Add this line to enable arrows
     responsive: [
       {
         breakpoint: 1024, // Tablet
@@ -81,7 +82,21 @@ const ProductSlider = () => {
 
   return (
     <>
-      <div className="product-slider-container">
+      <div
+        style={{
+          paddingTop: "5em",
+          display: "flex",
+          justifyContent: "space-between",
+        }}
+      >
+        <h1 style={{ fontWeight: 700, fontSize: 35 }}>{t("deals")}</h1>
+        <button className="view-all">{t("ViewAll")}</button>
+      </div>
+
+      <div
+        className="product-slider-container"
+        style={{ padding: "1em 0 2em 0" }}
+      >
         {loading ? (
           <Spin size="large" />
         ) : error ? (
@@ -92,13 +107,6 @@ const ProductSlider = () => {
               // console.log("product", product),
               <div key={product.id} className="product-card">
                 <ProductCard
-                  // _id={product.id}
-                  // productprice={product.price}
-                  // discountprice={product.discount_price}
-                  // productname={product.name}
-                  // productimg={product.img}
-                  // productstars={product.stars}
-                  // productreviews={product.reviews}
                   {...product} // Pass all product properties as props
                 />
               </div>
@@ -106,16 +114,8 @@ const ProductSlider = () => {
           </Slider>
         )}
       </div>
-
-      <div style={{ textAlign: "center", padding: "3em 0" }}>
-        <Link to="/products">
-          <button type="primary" block className="view-all">
-            {t("ViewAllProducts")}
-          </button>
-        </Link>
-      </div>
     </>
   );
 };
 
-export default ProductSlider;
+export default ProductDeals;

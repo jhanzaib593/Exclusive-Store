@@ -1,7 +1,8 @@
-import React, { useState } from "react";
-import { Menu, Drawer, Button } from "antd";
-import { MenuOutlined } from "@ant-design/icons";
+import React from "react";
+import { Menu, Space } from "antd";
+import Search from "antd/es/transfer/search";
 import "./index.css";
+import { useTranslation } from "react-i18next";
 
 const categories = [
   {
@@ -83,69 +84,54 @@ const categories = [
 ];
 
 const SideBar = () => {
-  const [isDrawerVisible, setIsDrawerVisible] = useState(false);
+  const language = localStorage.getItem("i18nextLng");
+  const { t } = useTranslation();
 
-  const showDrawer = () => {
-    setIsDrawerVisible(true);
+  // Function to map categories into Menu items
+  const createMenuItems = () =>
+    categories.map((category, index) => ({
+      key: `category-${index}`,
+      label: category[language].name,
+      children: category[language].subcategories
+        ? category[language].subcategories.map((subcategory, subIndex) => ({
+            key: `subcategory-${index}-${subIndex}`,
+            label: subcategory,
+          }))
+        : null,
+    }));
+
+  const onClick = (e) => {
+    console.log("Clicked: ", e.key);
   };
 
-  const closeDrawer = () => {
-    setIsDrawerVisible(false);
-  };
-
-  const renderMenu = () => {
-    // Get the current language from localStorage
-    const language = localStorage.getItem("i18nextLng");
-
-    return (
-      <Menu mode="vertical" className="sidebar-menu">
-        {categories.map((category, index) => {
-          const categoryName = category[language]?.name;
-          const subcategories = category[language]?.subcategories;
-
-          return subcategories ? (
-            <Menu.SubMenu
-              key={index}
-              title={<span className="menu-item">{categoryName}</span>}
-            >
-              {subcategories.map((subcategory, subIndex) => (
-                <Menu.Item key={`${index}-${subIndex}`}>
-                  {subcategory}
-                </Menu.Item>
-              ))}
-            </Menu.SubMenu>
-          ) : (
-            <Menu.Item key={index}>
-              <span className="menu-item">{categoryName}</span>
-            </Menu.Item>
-          );
-        })}
-      </Menu>
-    );
-  };
+  const onSearch = (value, _e, info) => console.log(info?.source, value);
 
   return (
-    <div>
-      {/* Mobile Drawer */}
-      <Drawer
-        title="Categories"
-        placement="left"
-        onClose={closeDrawer}
-        visible={isDrawerVisible}
-        bodyStyle={{ padding: 0 }}
-      >
-        {renderMenu()}
-      </Drawer>
-
-      <Button
-        icon={<MenuOutlined />}
-        onClick={showDrawer}
-        className="mobile-menu-button"
-      />
-
-      {/* Desktop Sidebar */}
-      <div className="desktop-sidebar">{renderMenu()}</div>
-    </div>
+    <Menu
+      onClick={onClick}
+      style={{
+        backgroundColor: "#f9fafb",
+      }}
+      // defaultSelectedKeys={["category-0"]}
+      // defaultOpenKeys={["category-0"]}
+      mode="inline"
+      items={[
+        {
+          key: "search",
+          label: (
+            <Space direction="vertical" style={{ width: "100%" }}>
+              <Search
+                placeholder={t("placeholder")}
+                onSearch={onSearch}
+                size="large"
+                style={{}}
+              />
+            </Space>
+          ),
+        },
+        ...createMenuItems(),
+      ]}
+    />
   );
 };
 

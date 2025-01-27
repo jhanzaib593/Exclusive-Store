@@ -1,10 +1,33 @@
 .language-switcher {
-    background-color: transparent !important;
-    color: white !important;
+    display: flex;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    
+    .language-link {
+        cursor: pointer;
+        color: var(--secondary-color);
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+    
+    .language-link:hover {
+        color: var(--primary-color);
 }
 
-.language-switcher:hover {
-    background-color: transparent !important;
+.active-language {
+    font-weight: bold;
+    color: var(--primary-color);
+    /* Highlight the active language */
+    cursor: pointer;
+}
 
-    color: #DB4444 !important;
+.separator {
+    color: var(--secondary-color);
+    font-size: 20px;
+    margin: auto;
+    font-weight: 200;
 }

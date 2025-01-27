@@ -1,13 +1,20 @@
+@import url(https://db.onlinewebfonts.com/c/af6d5a5939ba06080f9735cebcf72d81?family=DIN+Next+LT+Arabic+Black);
 body {
-  font-family: "Poppins", serif;
+  font-family: "DIN Next LT Arabic Black";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #FBFCFF;
+    --primary-color: #48A9A6;
+    --secondary-color: #b6b9c1;
+    --border-primary-color: #7588a2
 }
 
-code {
+/* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+*/
 
 * {
   margin: 0;

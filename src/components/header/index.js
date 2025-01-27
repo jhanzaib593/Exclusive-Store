@@ -1,32 +1,53 @@
-import { Col, Row, Affix, Input, Drawer, Button, Badge, Avatar } from "antd";
+import { Col, Row, Affix, Badge, Avatar } from "antd";
 import "./index.css";
-import React, { useState } from "react";
-import {
-  HeartOutlined,
-  MenuFoldOutlined,
-  SearchOutlined,
-  ShoppingCartOutlined,
-} from "@ant-design/icons";
-import { Link, NavLink } from "react-router-dom";
-import { useTranslation } from "react-i18next";
+import React, { useEffect, useState } from "react";
+import { ShoppingCartOutlined } from "@ant-design/icons";
+import { Link } from "react-router-dom";
+import LanguageSwitcher from "../LanguageSwitcherDropdown";
+import CurrencySelector from "../CurrencySelector";
+import logo from "../../assets/img/logo.png";
+import Navbar from "./navbar";
 
 const Header = () => {
-  const { t } = useTranslation();
-
   const productarry = localStorage.getItem("cart");
 
   const initialValue = productarry ? JSON.parse(productarry) : [];
 
   const [top, setTop] = React.useState(0);
-  const [open, setOpen] = useState(false);
+  const datacurrencies = JSON.parse(localStorage.getItem("currencies")) || [];
 
-  const showDrawer = () => {
-    setOpen(true);
+  const currencies = ["USD", "AED", "SAR"]; // Supported currencies
+  const [selectedCurrency, setSelectedCurrency] = useState(
+    datacurrencies.selectedCurrency || "USD"
+  );
+  const [exchangeRates, setExchangeRates] = useState({});
+
+  const fetchExchangeRates = async (baseCurrency) => {
+    try {
+      const response = await fetch(
+        `https://api.exchangerate-api.com/v4/latest/${baseCurrency}`
+      );
+      const data = await response.json();
+      setExchangeRates(data.rates);
+    } catch (error) {
+      console.error("Error fetching exchange rates:", error);
+    }
   };
-  const onClose = () => {
-    setOpen(false);
+
+  useEffect(() => {
+    fetchExchangeRates("USD"); // Fetch exchange rates with USD as the base currency
+  }, []);
+  const handleCurrencyChange = (currency) => {
+    setSelectedCurrency(currency);
+    window.location.reload();
   };
-  const [isExpanded, setIsExpanded] = useState(false);
+
+  const getExchangeRate = () => exchangeRates[selectedCurrency] || 1;
+  const currenciesData = {
+    selectedCurrency: selectedCurrency,
+    getExchangeRate: getExchangeRate(),
+  };
+  localStorage.setItem("currencies", JSON.stringify(currenciesData));
 
   return (
     <>
@@ -40,108 +61,41 @@ const Header = () => {
           <div className="container">
             <Row style={{ padding: "12px 0" }}>
               <Col span={4} className="logo">
-                <h2>{t("welcome")}</h2>
+                <img src={logo} alt="logo" height={50} width={100} />
               </Col>
-              <Col span={17} className="sreach_bar">
+              <Col span={20} className="nav_bar">
                 <div className="nav">
-                  <Link to="/" className="nav_link">
-                    {t("Home")}
-                  </Link>
-                  <NavLink className="nav_link">{t("Contact")}</NavLink>
-                  <NavLink className="nav_link">{t("About")}</NavLink>
-                  <NavLink className="nav_link">{t("SignUp")}</NavLink>
-                </div>
-                <Input
-                  placeholder={`${t("placeholder")}`}
-                  className="search"
-                  style={{
-                    width: "40%",
-                    borderRadius: "5px",
-                    backgroundColor: "#F5F5F5",
-                    border: "none",
-                    margin: "10px 0",
-                  }}
-                  suffix={<SearchOutlined />}
-                />
-                <div className="header_icon">
-                  {isExpanded && (
-                    <Input
-                      placeholder="Search..."
-                      autoFocus
-                      style={{
-                        transition: "width 0.3s ease",
-                        width: "100%",
-                        borderRadius: "5px",
-                        backgroundColor: "#F5F5F5",
-                        border: "none",
-                        margin: "10px 0",
-                      }}
-                      className="icon_cart search_icon"
-                      suffix={
-                        <SearchOutlined
+                  <Navbar />
+
+                  <div className="header_icon">
+                    <CurrencySelector
+                      currencies={currencies}
+                      selectedCurrency={selectedCurrency}
+                      onCurrencyChange={handleCurrencyChange}
+                    />
+                    <span className="separator">|</span>
+                    &nbsp;
+                    <LanguageSwitcher />
+                    <span className="separator">|</span>
+                    <Link to="/cart">
+                      <Badge
+                        className="icon_cart"
+                        style={{ margin: "auto" }}
+                        count={initialValue.length}
+                      >
+                        <Avatar
+                          className="icon_cart"
                           style={{
+                            backgroundColor: "transparent",
+                            color: "black",
                             fontSize: "25px",
                           }}
+                          icon={<ShoppingCartOutlined />}
                         />
-                      }
-                      onBlur={() => setIsExpanded(false)} // Collapse when focus is lost
-                    />
-                  )}
-
-                  {!isExpanded && (
-                    <Button
-                      type="default"
-                      icon={
-                        <SearchOutlined
-                          className="icon_cart"
-                          style={{ fontSize: "25px", border: "none" }}
-                        />
-                      }
-                      onClick={() => setIsExpanded(true)} // Expand input when clicked
-                    />
-                  )}
-                  <HeartOutlined
-                    className="icon_cart"
-                    style={{ fontSize: "25px" }}
-                  />
-                  <Link to="/cart">
-                    <Badge
-                      className="icon_cart"
-                      style={{ margin: "auto" }}
-                      count={initialValue.length}
-                    >
-                      <Avatar
-                        className="icon_cart"
-                        style={{
-                          backgroundColor: "transparent",
-                          color: "black",
-                          fontSize: "25px",
-                        }}
-                        icon={<ShoppingCartOutlined />}
-                      />
-                    </Badge>
-                  </Link>
-                </div>
-              </Col>
-
-              <Col span={3} className="h_drawer">
-                <MenuFoldOutlined onClick={showDrawer} />
-                <Drawer onClose={onClose} open={open}>
-                  <div className="nav_d">
-                    <NavLink className="nav_link nav_link_d">
-                      {t("Home")}
-                    </NavLink>
-                    <NavLink className="nav_link nav_link_d">
-                      {t("Contact")}
-                    </NavLink>
-                    <NavLink className="nav_link nav_link_d">
-                      {t("About")}
-                    </NavLink>
-                    <NavLink className="nav_link nav_link_d">
-                      {t("SignUp")}
-                    </NavLink>
+                      </Badge>
+                    </Link>
                   </div>
-                </Drawer>
+                </div>
               </Col>
             </Row>
           </div>

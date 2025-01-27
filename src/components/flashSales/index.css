@@ -1,53 +1,4 @@
-.flash-sales {
-    padding-top: 3em;
-}
 
-.product-slider-container {
-    text-align: center;
-    padding: 10px 0;
-}
-
-:where(.css-dev-only-do-not-override-161f05s).ant-spin .ant-spin-dot-holder {
-    color: #bf5859 !important;
-}
-
-.today {
-    border-left: 10px solid;
-    border-color: #DB4344;
-    padding-left: 10px;
-    color: #DB4344;
-}
-
-.timer {
-    padding-top: 1em;
-}
-
-.timer h2 {
-    font-weight: 600;
-    font-size: 30px;
-}
-
-.countdown {
-    display: flex;
-    gap: 1em;
-    padding-top: 8px;
-}
-
-.countdown span {
-    font-weight: 700;
-    font-size: 25px;
-}
-
-.countdown p {
-    font-size: 12px;
-}
-
-.text-2xl {
-    font-size: 21px;
-    line-height: 4rem;
-    opacity: 1;
-    color: #DB4344;
-}
 
 
 
@@ -59,12 +10,13 @@
      padding: 20px; 
 } */
 .view-all {
-    background-color: #DB4444;
+    background-color: var(--primary-color);
     color: #fff;
     border: none;
     text-align: center;
-    padding: 10px 5em;
+    padding: 15px 2em;
     border-radius: 6px;
+        font-size: 17px;
 }
 
 .product-card {
@@ -188,10 +140,6 @@
 }
 
 .add-to-cart {
-    position: absolute;
-    bottom: -50px;
-    left: 0;
-    right: 0;
     background-color: #000;
     color: #fff;
     text-align: center;
@@ -207,10 +155,6 @@
     color: #fff;
 }
 
-.card-cover:hover .add-to-cart {
-    bottom: 0;
-    /* Slide it up to the visible area */
-}
 
 .price {
     margin-top: 10px;

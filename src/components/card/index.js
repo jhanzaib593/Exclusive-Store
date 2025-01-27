@@ -31,35 +31,45 @@ const ProductCard = (props) => {
       hoverable
       cover={
         <div className="card-cover">
-          <Tag color="red" className="discount-tag">
+          {/* <Tag color="red" className="discount-tag">
             {`-${Math.round(
               ((props.price - props.discount_price) / props.price) * 100
             )}%`}
-          </Tag>
+          </Tag> */}
 
           <img alt={props.productname} src={props.img} />
-          <div className="overlay-buttons">
+          {/* <div className="overlay-buttons">
             <Tooltip title="Add to Wishlist">
               <HeartOutlined className="icon-button" />
             </Tooltip>
             <Tooltip title="View Details">
               <EyeOutlined className="icon-button" />
             </Tooltip>
-          </div>
-
-          <Button
-            type="primary"
-            block
-            className="add-to-cart"
-            onClick={() => addToCart(props)}
-          >
-            {t("AddToCart")}
-          </Button>
+          </div> */}
         </div>
       }
     >
       <Meta
-        title={props.translations?.[i18n.language].name}
+        title={
+          <>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                whiteSpace: "normal",
+              }}
+            >
+              <p>{props.translations?.[i18n.language].name}</p>
+              <p>
+                {props.qty >= 1 ? (
+                  <span className="stock"> {t("In Stock")}</span>
+                ) : (
+                  <span> {t("outstock")}</span>
+                )}
+              </p>
+            </div>
+          </>
+        }
         description={
           <>
             <p className="sale_price">
@@ -76,10 +86,15 @@ const ProductCard = (props) => {
                 )}
               </span>
             </p>
-            <div style={{ fontSize: 14 }}>
-              <Rate disabled className="stars" defaultValue={props.stars} />
-              &nbsp; ({props.reviews})
-            </div>
+
+            <Button
+              type="primary"
+              block
+              className="add-to-cart"
+              onClick={() => addToCart(props)}
+            >
+              {t("AddToCart")}
+            </Button>
           </>
         }
       />
