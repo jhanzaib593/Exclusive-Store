@@ -1,4 +1,4 @@
-.card-cover {
+/* .card-cover {
     position: relative;
 }
 
@@ -86,4 +86,37 @@
     font-size: 14px;
     color: #666;
     margin-left: 8px;
+}
+*/ .card-image {
+    border-radius: 10px;
+    background-color: white;
+}
+
+.card {
+    height: 100%;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.card-content {
+    height: 100%;
+    min-height: 7em
+}
+
+.stock::before {
+    content: "• ";
+    font-size: 20px;
+    color: #13c121;
+    font-weight: bolder;
+}
+
+.add-to-cart {
+    background-color: var(--white-color);
+    color: var(--black-color);
+    text-align: center;
+    padding: 20px 10px;
+    transition: all 0.5s ease-in-out;
+    border-radius: 10px;
+
+
 }

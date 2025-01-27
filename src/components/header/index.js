@@ -18,7 +18,7 @@ const Header = () => {
 
   const currencies = ["USD", "AED", "SAR"]; // Supported currencies
   const [selectedCurrency, setSelectedCurrency] = useState(
-    datacurrencies.selectedCurrency || "USD"
+    datacurrencies.selectedCurrency || "SAR"
   );
   const [exchangeRates, setExchangeRates] = useState({});
 
@@ -35,7 +35,7 @@ const Header = () => {
   };
 
   useEffect(() => {
-    fetchExchangeRates("USD"); // Fetch exchange rates with USD as the base currency
+    fetchExchangeRates("SAR"); // Fetch exchange rates with USD as the base currency
   }, []);
   const handleCurrencyChange = (currency) => {
     setSelectedCurrency(currency);
@@ -54,8 +54,7 @@ const Header = () => {
       <Affix offsetTop={top}>
         <div
           style={{
-            backgroundColor: "white",
-            borderBottom: "1px solid #B3B3B3",
+            backgroundColor: "var(--white-color)", // Wrap the CSS variable in quotes
           }}
         >
           <div className="container">

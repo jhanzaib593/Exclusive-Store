@@ -27,31 +27,104 @@ const ProductCard = (props) => {
   };
 
   return (
-    <Card
-      hoverable
-      cover={
-        <div className="card-cover">
-          {/* <Tag color="red" className="discount-tag">
-            {`-${Math.round(
-              ((props.price - props.discount_price) / props.price) * 100
-            )}%`}
-          </Tag> */}
+    //  <Card
+    //     hoverable
+    //     cover={
+    //       <div className="card-cover">
+    //         {/* <Tag color="red" className="discount-tag">
+    //           {`-${Math.round(
+    //             ((props.price - props.discount_price) / props.price) * 100
+    //           )}%`}
+    //         </Tag> */}
 
-          <img alt={props.productname} src={props.img} />
-          {/* <div className="overlay-buttons">
-            <Tooltip title="Add to Wishlist">
-              <HeartOutlined className="icon-button" />
-            </Tooltip>
-            <Tooltip title="View Details">
-              <EyeOutlined className="icon-button" />
-            </Tooltip>
-          </div> */}
+    //         <img alt={props.productname} src={props.img} />
+    //         {/* <div className="overlay-buttons">
+    //           <Tooltip title="Add to Wishlist">
+    //             <HeartOutlined className="icon-button" />
+    //           </Tooltip>
+    //           <Tooltip title="View Details">
+    //             <EyeOutlined className="icon-button" />
+    //           </Tooltip>
+    //         </div> */}
+    //       </div>
+    //     }
+    //   >
+    //     <Meta
+    //       title={
+    //         <>
+    //           <div
+    //             style={{
+    //               display: "flex",
+    //               justifyContent: "space-between",
+    //               whiteSpace: "normal",
+    //             }}
+    //           >
+    //             <p>{props.translations?.[i18n.language].name}</p>
+    //             <p>
+    //               {props.qty >= 1 ? (
+    //                 <span className="stock"> {t("In Stock")}</span>
+    //               ) : (
+    //                 <span> {t("outstock")}</span>
+    //               )}
+    //             </p>
+    //           </div>
+    //         </>
+    //       }
+    //       description={
+    //         <>
+    //           <p className="sale_price">
+    //             {/* ${props.discount_price}&nbsp; */}
+    //             {formatPrice(
+    //               props.discount_price * currenciesData.getExchangeRate,
+    //               currenciesData.selectedCurrency
+    //             )}
+    //             &nbsp;
+    //             <span>
+    //               {formatPrice(
+    //                 props.price * currenciesData.getExchangeRate,
+    //                 currenciesData.selectedCurrency
+    //               )}
+    //             </span>
+    //           </p>
+
+    //           <Button
+    //             type="primary"
+    //             block
+    //             className="add-to-cart"
+    //             onClick={() => addToCart(props)}
+    //           >
+    //             {t("AddToCart")}
+    //           </Button>
+    //         </>
+    //       }
+    //     />
+    //   </Card>
+    <>
+      <div className="card">
+        <div className="card-image">
+          <img src={props.img} alt={props.productname} />
         </div>
-      }
-    >
-      <Meta
-        title={
-          <>
+        <div className="card-content">
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              whiteSpace: "normal",
+            }}
+          >
+            <p>{props.translations?.[i18n.language].name}</p>
+            <p>
+              {props.qty >= 1 ? (
+                <span className="stock">
+                  {/* <span>&#8226;</span> */}
+                  {t("In Stock")}
+                </span>
+              ) : (
+                <span> {t("outstock")}</span>
+              )}
+            </p>
+          </div>
+          <p className="price">
             <div
               style={{
                 display: "flex",
@@ -59,46 +132,31 @@ const ProductCard = (props) => {
                 whiteSpace: "normal",
               }}
             >
-              <p>{props.translations?.[i18n.language].name}</p>
               <p>
-                {props.qty >= 1 ? (
-                  <span className="stock"> {t("In Stock")}</span>
-                ) : (
-                  <span> {t("outstock")}</span>
-                )}
+                Variant
+                {/* {props.translations?.[i18n.language].name} */}
               </p>
-            </div>
-          </>
-        }
-        description={
-          <>
-            <p className="sale_price">
-              {/* ${props.discount_price}&nbsp; */}
-              {formatPrice(
-                props.discount_price * currenciesData.getExchangeRate,
-                currenciesData.selectedCurrency
-              )}
-              &nbsp;
-              <span>
+              <span style={{ margin: "auto 0" }}>
                 {formatPrice(
                   props.price * currenciesData.getExchangeRate,
                   currenciesData.selectedCurrency
                 )}
               </span>
-            </p>
-
-            <Button
-              type="primary"
-              block
-              className="add-to-cart"
-              onClick={() => addToCart(props)}
-            >
-              {t("AddToCart")}
-            </Button>
-          </>
-        }
-      />
-    </Card>
+            </div>
+          </p>
+        </div>
+        <div className="card-footer">
+          <Button
+            type="primary"
+            block
+            className="add-to-cart"
+            onClick={() => addToCart(props)}
+          >
+            {t("AddToCart")}
+          </Button>
+        </div>
+      </div>
+    </>
   );
 };
 

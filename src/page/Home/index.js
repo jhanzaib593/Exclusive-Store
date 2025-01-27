@@ -2,9 +2,10 @@ import React from "react";
 import ImageCarousel from "../../components/banner";
 import { Col, Row } from "antd";
 import SideBar from "../../components/sidebar";
-import Categories from "../../components/categories";
 import OurBrand from "../../components/brand";
 import ProductDeals from "../../components/flashSales/product";
+import NewProduct from "../../components/newProduct";
+import Collections from "../../components/collection";
 
 export default function Home() {
   return (
@@ -21,7 +22,8 @@ export default function Home() {
         </Row>
         <OurBrand />
         <ProductDeals />
-        <Categories />
+        <NewProduct />
+        <Collections />
       </div>
     </>
   );
